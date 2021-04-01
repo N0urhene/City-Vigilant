@@ -1,11 +1,6 @@
-//
-//  AppDelegate.swift
-//  Projet
-//
-//  Created by nourhene on 29/03/2021.
-//
-
 import UIKit
+import Amplify
+import AmplifyPlugins
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +8,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        func configureAmplify() {
+           let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())
+           do {
+               try Amplify.add(plugin: dataStorePlugin)
+               try Amplify.configure()
+               print("Initialized Amplify");
+           } catch {
+               // simplified error handling for the tutorial
+               print("Could not initialize Amplify: \(error)")
+           }
+        }
         return true
     }
 

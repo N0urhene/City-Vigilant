@@ -1,17 +1,19 @@
-//
-//  ReportViewController.swift
-//  Projet
-//
-//  Created by nourhene on 29/03/2021.
-//
-
 import UIKit
+import Amplify
 
 class ReportViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            do {
+                try Amplify.configure()
+            } catch {
+                print("An error occurred setting up Amplify: \(error)")
+            }
+            return true
+        }
         // Do any additional setup after loading the view.
     }
     
