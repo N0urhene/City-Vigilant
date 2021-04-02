@@ -6,9 +6,9 @@ import AmplifyPlugins
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
-
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         func application(_: UIApplication,
                              didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
             ) -> Bool {
@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                try Amplify.configure()
                print("Initialized Amplify");
            } catch {
-               // simplified error handling for the tutorial
                print("Could not initialize Amplify: \(error)")
            }
         }

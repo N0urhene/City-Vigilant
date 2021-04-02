@@ -19,6 +19,8 @@
 		0F8BD7B92611D7CD00122DC7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7B82611D7CD00122DC7 /* ProfileViewController.swift */; };
 		0F8BD7BE2611D83900122DC7 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7BD2611D83900122DC7 /* ReportViewController.swift */; };
 		0F8BD7C32611D84A00122DC7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7C22611D84A00122DC7 /* SettingsViewController.swift */; };
+		1D3E556AA1BF41E799DA3BA9 /* Report+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEBD1982984650BC4F7258 /* Report+Schema.swift */; };
+		2029F29A6BBD4392B4C7CF46 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981139F1F0274469BEA12D8B /* Report.swift */; };
 		2E8CF76DBFCC4DF49BA06D5D /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FCA25B5DF4999BD3D5320 /* AmplifyModels.swift */; };
 		580FE6BA75A14DB9891AB52F /* User+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C811F35AC8A4D8ABE2AB20A /* User+Schema.swift */; };
 		616B7B66D6037F5CD8811F45 /* Pods_Projet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152EF49D96A09B4F5ED61608 /* Pods_Projet.framework */; };
@@ -74,7 +76,9 @@
 		894FCA25B5DF4999BD3D5320 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		8C811F35AC8A4D8ABE2AB20A /* User+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "User+Schema.swift"; path = "amplify/generated/models/User+Schema.swift"; sourceTree = "<group>"; };
 		96CBC0641835430C87F7205F /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
+		981139F1F0274469BEA12D8B /* Report.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Report.swift; path = amplify/generated/models/Report.swift; sourceTree = "<group>"; };
 		AA5279BDFBEFF2A097A4FD6B /* Pods-ProjetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetTests.release.xcconfig"; path = "Target Support Files/Pods-ProjetTests/Pods-ProjetTests.release.xcconfig"; sourceTree = "<group>"; };
+		ABBEBD1982984650BC4F7258 /* Report+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "Report+Schema.swift"; path = "amplify/generated/models/Report+Schema.swift"; sourceTree = "<group>"; };
 		BB24FC9387134DAB8AFFFE3A /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		CA4A03EC242F5259965634E0 /* Pods-Projet-ProjetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projet-ProjetUITests.debug.xcconfig"; path = "Target Support Files/Pods-Projet-ProjetUITests/Pods-Projet-ProjetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E47805E873734F51B410D519 /* amplifytools.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; path = amplifytools.xcconfig; sourceTree = "<group>"; };
@@ -140,9 +144,9 @@
 				0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */,
 				0F8BD7832611CC0500122DC7 /* HomeViewController.swift */,
 				0F8BD7B82611D7CD00122DC7 /* ProfileViewController.swift */,
-				0F8BD7852611CC0500122DC7 /* Main.storyboard */,
-				0F8BD7C22611D84A00122DC7 /* SettingsViewController.swift */,
 				0F8BD7BD2611D83900122DC7 /* ReportViewController.swift */,
+				0F8BD7C22611D84A00122DC7 /* SettingsViewController.swift */,
+				0F8BD7852611CC0500122DC7 /* Main.storyboard */,
 				0F8BD7882611CC0600122DC7 /* Assets.xcassets */,
 				0F8BD78A2611CC0600122DC7 /* LaunchScreen.storyboard */,
 				0F8BD78D2611CC0600122DC7 /* Info.plist */,
@@ -199,6 +203,8 @@
 				894FCA25B5DF4999BD3D5320 /* AmplifyModels.swift */,
 				01E94FC86E1A493CA02A2336 /* User.swift */,
 				8C811F35AC8A4D8ABE2AB20A /* User+Schema.swift */,
+				981139F1F0274469BEA12D8B /* Report.swift */,
+				ABBEBD1982984650BC4F7258 /* Report+Schema.swift */,
 			);
 			name = AmplifyModels;
 			path = .;
@@ -463,6 +469,8 @@
 				2E8CF76DBFCC4DF49BA06D5D /* AmplifyModels.swift in Sources */,
 				D939C1CE8F714880A47071C6 /* User.swift in Sources */,
 				580FE6BA75A14DB9891AB52F /* User+Schema.swift in Sources */,
+				2029F29A6BBD4392B4C7CF46 /* Report.swift in Sources */,
+				1D3E556AA1BF41E799DA3BA9 /* Report+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

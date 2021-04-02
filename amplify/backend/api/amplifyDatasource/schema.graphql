@@ -7,3 +7,8 @@
    email: String
    
  }
+ type Report @model {
+
+   id: ID!
+   description: String!
+ }

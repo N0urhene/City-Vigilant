@@ -4,7 +4,6 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 //
-
 import Foundation
 
 final public class DataStoreCategory: Category {
@@ -18,9 +17,10 @@ final public class DataStoreCategory: Category {
     /// are added, or if more than one plugin is added, will cause a `preconditionFailure`.
     var plugin: DataStoreCategoryPlugin {
         guard isConfigured else {
+          //  Amplify.configure()
             preconditionFailure(
                 """
-                \(categoryType.displayName) category is not configured. Call Amplify.configure() before using \
+                \(categoryType.displayName)category is not configured. Call Amplify.configure() before using \
                 any methods on the category.
                 """
             )
