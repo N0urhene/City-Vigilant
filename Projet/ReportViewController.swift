@@ -1,31 +1,25 @@
 import UIKit
 import Amplify
+import AmplifyPlugins
 
 class ReportViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-            do {
-                try Amplify.configure()
-            } catch {
-                print("An error occurred setting up Amplify: \(error)")
-            }
-            return true
-        }
-        // Do any additional setup after loading the view.
+     self.performOnAppear()
+       // self.configureAmplify()
     }
+    func performOnAppear() {
+        let item = User(firstName: "Nourhene", lastName: "Soueid")
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    Amplify.DataStore.save(item) { result in
+       switch(result) {
+       case .success(let savedItem):
+           print("Saved item: \(savedItem.firstName)")
+       case .failure(let error):
+           print("Could not save item to DataStore: \(error)")
+       }
     }
-    */
-
+  }
 }

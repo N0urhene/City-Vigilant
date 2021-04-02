@@ -2,7 +2,6 @@ PODS:
   - Amplify (1.7.0):
     - Amplify/Default (= 1.7.0)
   - Amplify/Default (1.7.0)
-  - Amplify/Tools (1.7.0)
   - AmplifyPlugins/AWSAPIPlugin (1.7.0):
     - AppSyncRealTimeClient (~> 1.4.0)
     - AWSCore (~> 2.23.0)
@@ -24,7 +23,6 @@ PODS:
 
 DEPENDENCIES:
   - Amplify
-  - Amplify/Tools
   - AmplifyPlugins/AWSAPIPlugin
   - AmplifyPlugins/AWSDataStorePlugin
 
@@ -47,6 +45,6 @@ SPEC CHECKSUMS:
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 1d31c70445a5be68c4e7da2517245b8dcde7a5ab
+PODFILE CHECKSUM: fb4332f10f3c46d6e4d28b0f72c63f9438ef8655
 
 COCOAPODS: 1.9.3
