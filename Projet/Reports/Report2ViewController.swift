@@ -1,13 +1,13 @@
 //
-//  SettingsViewController.swift
+//  Report2ViewController.swift
 //  Projet
 //
-//  Created by nourhene on 29/03/2021.
+//  Created by nourhene on 04/04/2021.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class Report2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

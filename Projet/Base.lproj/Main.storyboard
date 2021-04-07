@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+            <point key="canvasLocation" x="849" y="-23"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hck-Wz-K0P">
@@ -33,14 +33,15 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="N3i-Um-TD6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tN7-Xt-VRM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="W2R-zT-N3g"/>
+                        <segue destination="KpK-l1-owV" kind="relationship" relationship="viewControllers" id="awJ-5k-3iO"/>
+                        <segue destination="mH1-Yq-mfg" kind="relationship" relationship="viewControllers" id="STl-Ka-woq"/>
                         <segue destination="ZdP-Fe-5nG" kind="relationship" relationship="viewControllers" id="u5G-dT-Qbv"/>
-                        <segue destination="mH1-Yq-mfg" kind="relationship" relationship="viewControllers" id="5zs-gZ-C8w"/>
-                        <segue destination="KpK-l1-owV" kind="relationship" relationship="viewControllers" id="uEE-ST-ukQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZK-CW-fVB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -52,18 +53,81 @@
             <objects>
                 <viewController id="mH1-Yq-mfg" customClass="ReportViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cos-jb-R8p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-Nd-GbG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1017"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOCATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh7-Fm-b6i" userLabel="location">
+                                        <rect key="frame" x="20" y="530" width="353" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Municipality:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5D-TM-2Q5">
+                                <rect key="frame" x="12" y="662" width="361" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Street:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBO-Uq-nE4">
+                                <rect key="frame" x="12" y="813" width="382" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulM-ll-ZdF">
+                                <rect key="frame" x="12" y="717" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SuV-Pd-X5g">
+                                <rect key="frame" x="12" y="859" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9k-gY-yUU">
+                                <rect key="frame" x="246" y="951" width="140" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.095330081532504718" green="0.20269128497503131" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ooZ-N0-P2q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MVf-Nd-GbG" firstAttribute="top" secondItem="cos-jb-R8p" secondAttribute="top" id="SUH-CY-iyS"/>
+                            <constraint firstItem="MVf-Nd-GbG" firstAttribute="top" secondItem="cos-jb-R8p" secondAttribute="top" id="WIf-Rr-2Bl"/>
+                            <constraint firstItem="MVf-Nd-GbG" firstAttribute="trailing" secondItem="ooZ-N0-P2q" secondAttribute="trailing" id="aCZ-TT-DGL"/>
+                            <constraint firstItem="MVf-Nd-GbG" firstAttribute="bottom" secondItem="ooZ-N0-P2q" secondAttribute="bottom" id="i85-Pw-Efp"/>
+                            <constraint firstItem="MVf-Nd-GbG" firstAttribute="leading" secondItem="ooZ-N0-P2q" secondAttribute="leading" id="iq4-eM-mJm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Report" selectedImage="exclamationmark.triangle" catalog="system" id="BPw-Ek-4QC">
                         <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <size key="freeformSize" width="414" height="1100"/>
+                    <connections>
+                        <outlet property="municipalityTextField" destination="ulM-ll-ZdF" id="ys5-Gj-vhO"/>
+                        <outlet property="streetTextField" destination="SuV-Pd-X5g" id="mM2-ZT-Prj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnw-Nc-bYZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2283" y="94"/>
+            <point key="canvasLocation" x="2383" y="44"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dAC-An-tsM">
@@ -82,34 +146,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I75-7I-pN7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1594" y="94"/>
+            <point key="canvasLocation" x="3071" y="-32"/>
         </scene>
-        <!--Settings-->
+        <!--Posts-->
         <scene sceneID="3mu-68-rwj">
             <objects>
-                <viewController id="KpK-l1-owV" customClass="SettingsViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KpK-l1-owV" customClass="PostsViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S5a-ce-3uy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="i2e-Sm-OJK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gearshape" catalog="system" id="8RA-Tx-Ge0">
-                        <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
+                    <tabBarItem key="tabBarItem" title="Posts" selectedImage="bubble.left" catalog="system" id="8RA-Tx-Ge0">
+                        <imageReference key="image" image="bubble.right" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqh-ku-HdY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3070" y="94"/>
+            <point key="canvasLocation" x="1638" y="-23"/>
+        </scene>
+        <!--Report-->
+        <scene sceneID="MLy-bU-LtN">
+            <objects>
+                <viewController id="ncZ-xl-ZV7" customClass="Report2ViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZw-v5-bEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ITM-Hd-udg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Report" selectedImage="exclamationmark.triangle" catalog="system" id="lqG-dn-20t">
+                        <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wby-H1-mpe" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829" y="873"/>
+        </scene>
+        <!--Report-->
+        <scene sceneID="mAk-6a-pGS">
+            <objects>
+                <viewController id="Z0U-O4-08I" customClass="Report3ViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4dL-QN-3Cx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PFI-ZW-X8r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Report" selectedImage="exclamationmark.triangle" catalog="system" id="jLF-rR-v5D">
+                        <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJb-Lp-4BL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="873"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bubble.left" catalog="system" width="128" height="110"/>
+        <image name="bubble.right" catalog="system" width="128" height="110"/>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
