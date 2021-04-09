@@ -9,6 +9,7 @@
  }
  type Report @model {
 
-   id: ID!
-   description: String!
+   name: String!
+   region: String
+   description: String
  }

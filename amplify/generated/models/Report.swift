@@ -4,11 +4,17 @@ import Foundation
 
 public struct Report: Model {
   public let id: String
-  public var description: String
+  public var name: String
+  public var region: String?
+  public var description: String?
   
   public init(id: String = UUID().uuidString,
-      description: String) {
+      name: String,
+      region: String? = nil,
+      description: String? = nil) {
       self.id = id
+      self.name = name
+      self.region = region
       self.description = description
   }
 }
