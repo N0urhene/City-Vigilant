@@ -10,6 +10,9 @@
 		024C254B734B43AFA36A5A84 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BB24FC9387134DAB8AFFFE3A /* amplifyconfiguration.json */; };
 		0F023D3F2620465D00C40AC6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D3E2620465D00C40AC6 /* Profile.swift */; };
 		0F023D4426204EBA00C40AC6 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D4326204EBA00C40AC6 /* ProfileData.swift */; };
+		0F023D492620C3E400C40AC6 /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D482620C3E400C40AC6 /* FileTableViewCell.swift */; };
+		0F023D4E26210E5800C40AC6 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D4D26210E5800C40AC6 /* AccountTableViewCell.swift */; };
+		0F84C0FB26244C9C004C5FDE /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C0FA26244C9C004C5FDE /* Categories.swift */; };
 		0F8BD7802611CC0500122DC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD77F2611CC0500122DC7 /* AppDelegate.swift */; };
 		0F8BD7822611CC0500122DC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */; };
 		0F8BD7842611CC0500122DC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7832611CC0500122DC7 /* HomeViewController.swift */; };
@@ -21,10 +24,13 @@
 		0F8BD7B92611D7CD00122DC7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7B82611D7CD00122DC7 /* ProfileViewController.swift */; };
 		0F8BD7BE2611D83900122DC7 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7BD2611D83900122DC7 /* ReportViewController.swift */; };
 		0F8BD7C32611D84A00122DC7 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7C22611D84A00122DC7 /* PostsViewController.swift */; };
-		0FB2B8972619FD9D00EB6DBE /* Report2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2B8962619FD9D00EB6DBE /* Report2ViewController.swift */; };
+		0FB2B8972619FD9D00EB6DBE /* ReportStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2B8962619FD9D00EB6DBE /* ReportStep2ViewController.swift */; };
 		0FB2B89C2619FDB800EB6DBE /* Report3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2B89B2619FDB800EB6DBE /* Report3ViewController.swift */; };
 		0FF7D310261F1D2700DE6A02 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */; };
 		0FF7D318261FBE7900DE6A02 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */; };
+		0FFC2662262220A10015249E /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFC2661262220A10015249E /* Category.storyboard */; };
+		0FFC266A2623511A0015249E /* Step2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC26692623511A0015249E /* Step2CollectionViewCell.swift */; };
+		0FFC2675262398190015249E /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC2674262398190015249E /* DataViewController.swift */; };
 		1D3E556AA1BF41E799DA3BA9 /* Report+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEBD1982984650BC4F7258 /* Report+Schema.swift */; };
 		2029F29A6BBD4392B4C7CF46 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981139F1F0274469BEA12D8B /* Report.swift */; };
 		2E8CF76DBFCC4DF49BA06D5D /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FCA25B5DF4999BD3D5320 /* AmplifyModels.swift */; };
@@ -58,6 +64,9 @@
 		01E94FC86E1A493CA02A2336 /* User.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = User.swift; path = amplify/generated/models/User.swift; sourceTree = "<group>"; };
 		0F023D3E2620465D00C40AC6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		0F023D4326204EBA00C40AC6 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		0F023D482620C3E400C40AC6 /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		0F023D4D26210E5800C40AC6 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		0F84C0FA26244C9C004C5FDE /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		0F8BD77C2611CC0500122DC7 /* Projet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8BD77F2611CC0500122DC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,10 +84,13 @@
 		0F8BD7B82611D7CD00122DC7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0F8BD7BD2611D83900122DC7 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		0F8BD7C22611D84A00122DC7 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
-		0FB2B8962619FD9D00EB6DBE /* Report2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report2ViewController.swift; sourceTree = "<group>"; };
+		0FB2B8962619FD9D00EB6DBE /* ReportStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportStep2ViewController.swift; sourceTree = "<group>"; };
 		0FB2B89B2619FDB800EB6DBE /* Report3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report3ViewController.swift; sourceTree = "<group>"; };
 		0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		0FFC2661262220A10015249E /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
+		0FFC26692623511A0015249E /* Step2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2CollectionViewCell.swift; sourceTree = "<group>"; };
+		0FFC2674262398190015249E /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		152EF49D96A09B4F5ED61608 /* Pods_Projet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		158E72FA703F49A99CEEB529 /* schema.graphql */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/amplifyDatasource/schema.graphql; sourceTree = "<group>"; };
 		4130334E7528FC123B12FEB0 /* Pods-Projet-ProjetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projet-ProjetUITests.release.xcconfig"; path = "Target Support Files/Pods-Projet-ProjetUITests/Pods-Projet-ProjetUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +174,7 @@
 				0F8BD7882611CC0600122DC7 /* Assets.xcassets */,
 				0F8BD78A2611CC0600122DC7 /* LaunchScreen.storyboard */,
 				0F8BD78D2611CC0600122DC7 /* Info.plist */,
+				0FFC2674262398190015249E /* DataViewController.swift */,
 			);
 			path = Projet;
 			sourceTree = "<group>";
@@ -189,8 +202,12 @@
 			children = (
 				0F8BD7BD2611D83900122DC7 /* ReportViewController.swift */,
 				0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */,
-				0FB2B8962619FD9D00EB6DBE /* Report2ViewController.swift */,
+				0F023D482620C3E400C40AC6 /* FileTableViewCell.swift */,
+				0FB2B8962619FD9D00EB6DBE /* ReportStep2ViewController.swift */,
+				0FFC26692623511A0015249E /* Step2CollectionViewCell.swift */,
 				0FB2B89B2619FDB800EB6DBE /* Report3ViewController.swift */,
+				0FFC2661262220A10015249E /* Category.storyboard */,
+				0F84C0FA26244C9C004C5FDE /* Categories.swift */,
 			);
 			path = Reports;
 			sourceTree = "<group>";
@@ -210,6 +227,7 @@
 				0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */,
 				0F023D3E2620465D00C40AC6 /* Profile.swift */,
 				0F023D4326204EBA00C40AC6 /* ProfileData.swift */,
+				0F023D4D26210E5800C40AC6 /* AccountTableViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -378,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FFC2662262220A10015249E /* Category.storyboard in Resources */,
 				0F8BD78C2611CC0600122DC7 /* LaunchScreen.storyboard in Resources */,
 				0F8BD7892611CC0600122DC7 /* Assets.xcassets in Resources */,
 				0F8BD7872611CC0500122DC7 /* Main.storyboard in Resources */,
@@ -511,11 +530,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F023D4426204EBA00C40AC6 /* ProfileData.swift in Sources */,
+				0FFC2675262398190015249E /* DataViewController.swift in Sources */,
+				0F023D492620C3E400C40AC6 /* FileTableViewCell.swift in Sources */,
 				0F8BD7842611CC0500122DC7 /* HomeViewController.swift in Sources */,
 				0F8BD7802611CC0500122DC7 /* AppDelegate.swift in Sources */,
 				0F8BD7B92611D7CD00122DC7 /* ProfileViewController.swift in Sources */,
+				0F023D4E26210E5800C40AC6 /* AccountTableViewCell.swift in Sources */,
 				0FF7D318261FBE7900DE6A02 /* ProfileTableViewCell.swift in Sources */,
-				0FB2B8972619FD9D00EB6DBE /* Report2ViewController.swift in Sources */,
+				0FB2B8972619FD9D00EB6DBE /* ReportStep2ViewController.swift in Sources */,
+				0FFC266A2623511A0015249E /* Step2CollectionViewCell.swift in Sources */,
 				0F8BD7BE2611D83900122DC7 /* ReportViewController.swift in Sources */,
 				0FF7D310261F1D2700DE6A02 /* ReportTableViewCell.swift in Sources */,
 				0F8BD7822611CC0500122DC7 /* SceneDelegate.swift in Sources */,
@@ -523,6 +546,7 @@
 				0F023D3F2620465D00C40AC6 /* Profile.swift in Sources */,
 				2E8CF76DBFCC4DF49BA06D5D /* AmplifyModels.swift in Sources */,
 				0FB2B89C2619FDB800EB6DBE /* Report3ViewController.swift in Sources */,
+				0F84C0FB26244C9C004C5FDE /* Categories.swift in Sources */,
 				D939C1CE8F714880A47071C6 /* User.swift in Sources */,
 				580FE6BA75A14DB9891AB52F /* User+Schema.swift in Sources */,
 				2029F29A6BBD4392B4C7CF46 /* Report.swift in Sources */,

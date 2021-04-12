@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Report-->
+        <scene sceneID="296-bL-kjc">
+            <objects>
+                <viewController id="ZiM-P4-ah4" customClass="ReportStep2ViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RfE-fd-fhH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-fU-BND">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hHO-Ht-ykC">
+                                    <size key="itemSize" width="190" height="190"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="40B-34-xyi" customClass="Step2CollectionViewCell" customModule="Projet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zea-vG-1UN">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YF1-jT-Czz">
+                                                    <rect key="frame" x="21" y="15" width="148" height="126"/>
+                                                    <imageReference key="image" image="trash" catalog="system" symbolScale="large" renderingMode="original"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLU-0t-tIq">
+                                                    <rect key="frame" x="69" y="147" width="90" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YF1-jT-Czz" secondAttribute="trailing" constant="10" id="12V-wa-xKv"/>
+                                                <constraint firstItem="YF1-jT-Czz" firstAttribute="leading" secondItem="zea-vG-1UN" secondAttribute="leading" constant="10" id="hDJ-Wg-fb4"/>
+                                                <constraint firstItem="YF1-jT-Czz" firstAttribute="top" secondItem="zea-vG-1UN" secondAttribute="top" constant="19" id="tKW-QC-Mod"/>
+                                                <constraint firstItem="iLU-0t-tIq" firstAttribute="top" secondItem="YF1-jT-Czz" secondAttribute="bottom" constant="50" id="vVH-N7-jHs"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImage" destination="YF1-jT-Czz" id="2g0-If-DtN"/>
+                                            <outlet property="label" destination="iLU-0t-tIq" id="yXz-Tv-cJA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZiM-P4-ah4" id="VGY-oI-Cnp"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H7j-58-eoD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rcl-fU-BND" firstAttribute="leading" secondItem="H7j-58-eoD" secondAttribute="leading" id="N9u-QO-OJ9"/>
+                            <constraint firstItem="H7j-58-eoD" firstAttribute="bottom" secondItem="rcl-fU-BND" secondAttribute="bottom" id="YJO-EK-Jtv"/>
+                            <constraint firstItem="H7j-58-eoD" firstAttribute="trailing" secondItem="rcl-fU-BND" secondAttribute="trailing" id="ZhW-Y0-ze3"/>
+                            <constraint firstItem="rcl-fU-BND" firstAttribute="top" secondItem="H7j-58-eoD" secondAttribute="top" id="oFy-eW-urh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Report" id="64U-ox-JD8"/>
+                    <connections>
+                        <outlet property="collectionView" destination="rcl-fU-BND" id="jbV-ok-NdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57N-4j-OvL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5531.884057971015" y="997.76785714285711"/>
+        </scene>
+        <!--Report-->
+        <scene sceneID="l1J-r4-eoO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WtY-wH-41v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Report" selectedImage="exclamationmark.triangle" catalog="system" id="BpF-5b-DUd">
+                        <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0o6-4l-hFh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <color key="textColor" red="0.32549019610000002" green="0.56470588239999997" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <color key="textColor" red="0.32549019610000002" green="0.56470588239999997" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZiM-P4-ah4" kind="relationship" relationship="rootViewController" id="4gH-tE-c1B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1LV-HV-cq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6442.0289855072469" y="997.76785714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

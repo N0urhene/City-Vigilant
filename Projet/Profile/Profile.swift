@@ -1,6 +1,6 @@
 import UIKit
 
-struct  Profile: Decodable {
+struct  Profile: Decodable  {
     let title: String
     let imageIcon: String
     
