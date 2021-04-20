@@ -8,8 +8,8 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userData().self
-        reportData().self
+        userData()
+        reportData()
     }
     
     func createUserData() {

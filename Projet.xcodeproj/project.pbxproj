@@ -10,9 +10,19 @@
 		024C254B734B43AFA36A5A84 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BB24FC9387134DAB8AFFFE3A /* amplifyconfiguration.json */; };
 		0F023D3F2620465D00C40AC6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D3E2620465D00C40AC6 /* Profile.swift */; };
 		0F023D4426204EBA00C40AC6 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D4326204EBA00C40AC6 /* ProfileData.swift */; };
-		0F023D492620C3E400C40AC6 /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D482620C3E400C40AC6 /* FileTableViewCell.swift */; };
 		0F023D4E26210E5800C40AC6 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F023D4D26210E5800C40AC6 /* AccountTableViewCell.swift */; };
+		0F3C2DCF262D9983000271DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C2DCE262D9983000271DD /* LoginViewController.swift */; };
+		0F3C2DD4262D99CC000271DD /* LoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C2DD3262D99CC000271DD /* LoginTableViewCell.swift */; };
+		0F3C2DDB262EE551000271DD /* SaveReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C2DD9262EE551000271DD /* SaveReportCell.swift */; };
+		0F3C2DDC262EE551000271DD /* SaveReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3C2DDA262EE551000271DD /* SaveReportCell.xib */; };
+		0F3C2DE5262EEDD1000271DD /* StreetReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C2DE3262EEDD1000271DD /* StreetReportCell.swift */; };
+		0F3C2DE6262EEDD1000271DD /* StreetReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3C2DE4262EEDD1000271DD /* StreetReportCell.xib */; };
+		0F3C2DFF262EF3B9000271DD /* FileReportCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C2DFD262EF3B9000271DD /* FileReportCellCell.swift */; };
+		0F3C2E00262EF3B9000271DD /* FileReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3C2DFE262EF3B9000271DD /* FileReportCell.xib */; };
 		0F84C0FB26244C9C004C5FDE /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C0FA26244C9C004C5FDE /* Categories.swift */; };
+		0F84C1002629BED4004C5FDE /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */; };
+		0F84C1092629C593004C5FDE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1082629C593004C5FDE /* RegisterViewController.swift */; };
+		0F84C1122629C5BB004C5FDE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F84C1112629C5BB004C5FDE /* Storyboard.storyboard */; };
 		0F8BD7802611CC0500122DC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD77F2611CC0500122DC7 /* AppDelegate.swift */; };
 		0F8BD7822611CC0500122DC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */; };
 		0F8BD7842611CC0500122DC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7832611CC0500122DC7 /* HomeViewController.swift */; };
@@ -64,9 +74,19 @@
 		01E94FC86E1A493CA02A2336 /* User.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = User.swift; path = amplify/generated/models/User.swift; sourceTree = "<group>"; };
 		0F023D3E2620465D00C40AC6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		0F023D4326204EBA00C40AC6 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
-		0F023D482620C3E400C40AC6 /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
 		0F023D4D26210E5800C40AC6 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		0F3C2DCE262D9983000271DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0F3C2DD3262D99CC000271DD /* LoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewCell.swift; sourceTree = "<group>"; };
+		0F3C2DD9262EE551000271DD /* SaveReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportCell.swift; sourceTree = "<group>"; };
+		0F3C2DDA262EE551000271DD /* SaveReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveReportCell.xib; sourceTree = "<group>"; };
+		0F3C2DE3262EEDD1000271DD /* StreetReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetReportCell.swift; sourceTree = "<group>"; };
+		0F3C2DE4262EEDD1000271DD /* StreetReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreetReportCell.xib; sourceTree = "<group>"; };
+		0F3C2DFD262EF3B9000271DD /* FileReportCellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReportCellCell.swift; sourceTree = "<group>"; };
+		0F3C2DFE262EF3B9000271DD /* FileReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileReportCell.xib; sourceTree = "<group>"; };
 		0F84C0FA26244C9C004C5FDE /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		0F84C1082629C593004C5FDE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0F84C1112629C5BB004C5FDE /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		0F8BD77C2611CC0500122DC7 /* Projet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8BD77F2611CC0500122DC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +157,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3C2DD8262EE523000271DD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F3C2DD9262EE551000271DD /* SaveReportCell.swift */,
+				0F3C2DDA262EE551000271DD /* SaveReportCell.xib */,
+				0F3C2DE3262EEDD1000271DD /* StreetReportCell.swift */,
+				0F3C2DE4262EEDD1000271DD /* StreetReportCell.xib */,
+				0F3C2DFD262EF3B9000271DD /* FileReportCellCell.swift */,
+				0F3C2DFE262EF3B9000271DD /* FileReportCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F84C1072629C4B9004C5FDE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0FFC2674262398190015249E /* DataViewController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0F84C1102629C59B004C5FDE /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				0F84C1082629C593004C5FDE /* RegisterViewController.swift */,
+				0F84C1112629C5BB004C5FDE /* Storyboard.storyboard */,
+				0F3C2DCE262D9983000271DD /* LoginViewController.swift */,
+				0F3C2DD3262D99CC000271DD /* LoginTableViewCell.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		0F8BD7732611CC0500122DC7 = {
 			isa = PBXGroup;
 			children = (
@@ -170,11 +222,12 @@
 				0FF7D2A4261DA85F00DE6A02 /* Profile */,
 				0FF7D299261DA7C700DE6A02 /* Reports */,
 				0FF7D2A0261DA85100DE6A02 /* Posts */,
+				0F84C1102629C59B004C5FDE /* Register */,
 				0F8BD7852611CC0500122DC7 /* Main.storyboard */,
 				0F8BD7882611CC0600122DC7 /* Assets.xcassets */,
 				0F8BD78A2611CC0600122DC7 /* LaunchScreen.storyboard */,
 				0F8BD78D2611CC0600122DC7 /* Info.plist */,
-				0FFC2674262398190015249E /* DataViewController.swift */,
+				0F84C1072629C4B9004C5FDE /* Data */,
 			);
 			path = Projet;
 			sourceTree = "<group>";
@@ -200,9 +253,10 @@
 		0FF7D299261DA7C700DE6A02 /* Reports */ = {
 			isa = PBXGroup;
 			children = (
+				0F3C2DD8262EE523000271DD /* Cells */,
 				0F8BD7BD2611D83900122DC7 /* ReportViewController.swift */,
 				0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */,
-				0F023D482620C3E400C40AC6 /* FileTableViewCell.swift */,
+				0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */,
 				0FB2B8962619FD9D00EB6DBE /* ReportStep2ViewController.swift */,
 				0FFC26692623511A0015249E /* Step2CollectionViewCell.swift */,
 				0FB2B89B2619FDB800EB6DBE /* Report3ViewController.swift */,
@@ -396,11 +450,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3C2DE6262EEDD1000271DD /* StreetReportCell.xib in Resources */,
 				0FFC2662262220A10015249E /* Category.storyboard in Resources */,
 				0F8BD78C2611CC0600122DC7 /* LaunchScreen.storyboard in Resources */,
 				0F8BD7892611CC0600122DC7 /* Assets.xcassets in Resources */,
 				0F8BD7872611CC0500122DC7 /* Main.storyboard in Resources */,
 				024C254B734B43AFA36A5A84 /* amplifyconfiguration.json in Resources */,
+				0F84C1122629C5BB004C5FDE /* Storyboard.storyboard in Resources */,
+				0F3C2E00262EF3B9000271DD /* FileReportCell.xib in Resources */,
+				0F3C2DDC262EE551000271DD /* SaveReportCell.xib in Resources */,
 				65A95F8D94BB4D1F82FB2E4B /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,23 +589,29 @@
 			files = (
 				0F023D4426204EBA00C40AC6 /* ProfileData.swift in Sources */,
 				0FFC2675262398190015249E /* DataViewController.swift in Sources */,
-				0F023D492620C3E400C40AC6 /* FileTableViewCell.swift in Sources */,
+				0F84C1092629C593004C5FDE /* RegisterViewController.swift in Sources */,
 				0F8BD7842611CC0500122DC7 /* HomeViewController.swift in Sources */,
 				0F8BD7802611CC0500122DC7 /* AppDelegate.swift in Sources */,
 				0F8BD7B92611D7CD00122DC7 /* ProfileViewController.swift in Sources */,
 				0F023D4E26210E5800C40AC6 /* AccountTableViewCell.swift in Sources */,
+				0F3C2DFF262EF3B9000271DD /* FileReportCellCell.swift in Sources */,
 				0FF7D318261FBE7900DE6A02 /* ProfileTableViewCell.swift in Sources */,
 				0FB2B8972619FD9D00EB6DBE /* ReportStep2ViewController.swift in Sources */,
 				0FFC266A2623511A0015249E /* Step2CollectionViewCell.swift in Sources */,
 				0F8BD7BE2611D83900122DC7 /* ReportViewController.swift in Sources */,
 				0FF7D310261F1D2700DE6A02 /* ReportTableViewCell.swift in Sources */,
+				0F3C2DD4262D99CC000271DD /* LoginTableViewCell.swift in Sources */,
+				0F3C2DCF262D9983000271DD /* LoginViewController.swift in Sources */,
 				0F8BD7822611CC0500122DC7 /* SceneDelegate.swift in Sources */,
 				0F8BD7C32611D84A00122DC7 /* PostsViewController.swift in Sources */,
 				0F023D3F2620465D00C40AC6 /* Profile.swift in Sources */,
 				2E8CF76DBFCC4DF49BA06D5D /* AmplifyModels.swift in Sources */,
 				0FB2B89C2619FDB800EB6DBE /* Report3ViewController.swift in Sources */,
+				0F3C2DE5262EEDD1000271DD /* StreetReportCell.swift in Sources */,
 				0F84C0FB26244C9C004C5FDE /* Categories.swift in Sources */,
+				0F3C2DDB262EE551000271DD /* SaveReportCell.swift in Sources */,
 				D939C1CE8F714880A47071C6 /* User.swift in Sources */,
+				0F84C1002629BED4004C5FDE /* ButtonTableViewCell.swift in Sources */,
 				580FE6BA75A14DB9891AB52F /* User+Schema.swift in Sources */,
 				2029F29A6BBD4392B4C7CF46 /* Report.swift in Sources */,
 				1D3E556AA1BF41E799DA3BA9 /* Report+Schema.swift in Sources */,

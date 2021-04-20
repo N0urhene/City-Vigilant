@@ -1,17 +1,14 @@
 //
-//  FileTableViewCell.swift
+//  FileReportCell.swift
 //  Projet
 //
-//  Created by nourhene on 09/04/2021.
+//  Created by nourhene on 20/04/2021.
 //
 
 import UIKit
 
-class FileTableViewCell: UITableViewCell {
+class FileReportCell: UITableViewCell {
 
-    @IBOutlet weak var fileLabel: UILabel!
-    @IBOutlet weak var imageIcon: UIImageView!
-   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

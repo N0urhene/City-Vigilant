@@ -1,7 +1,7 @@
 
 import UIKit
 
-let ProfileArray: [Profile] = [
+let profileArray: [Profile] = [
 
     Profile(
         title: "Personal information", imageIcon: "person"

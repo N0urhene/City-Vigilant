@@ -1,9 +1,3 @@
-//
-//  Step2TableViewCell.swift
-//  Projet
-//
-//  Created by nourhene on 11/04/2021.
-//
 
 import UIKit
 
