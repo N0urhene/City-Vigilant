@@ -10,6 +10,7 @@ import UIKit
 class FileReportCell: UITableViewCell {
 
     @IBOutlet weak var fileButton: UIButton!
+    @IBOutlet weak var iconImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         fileButton.layer.cornerRadius = 12

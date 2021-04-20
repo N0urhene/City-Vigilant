@@ -14,7 +14,7 @@ class SaveReportCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        saveButton.layer.cornerRadius = 12
     }
 
     @IBAction func saveAction(_ sender: Any) {

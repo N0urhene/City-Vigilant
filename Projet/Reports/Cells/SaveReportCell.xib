@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFA-xG-Rnt">
-                        <rect key="frame" x="20" y="10" width="280" height="56"/>
+                        <rect key="frame" x="20" y="5.5" width="280" height="65"/>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.56470588239999997" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="56" id="MeJ-LE-4rk"/>
+                            <constraint firstAttribute="height" constant="65" id="gSc-mz-72f"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                         <state key="normal" title="DONE">

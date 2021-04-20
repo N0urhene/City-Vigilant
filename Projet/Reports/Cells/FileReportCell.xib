@@ -18,21 +18,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-05-162">
-                        <rect key="frame" x="15" y="10" width="290" height="59"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-05-162">
+                        <rect key="frame" x="20" y="15" width="280" height="49"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                        <state key="normal" title="Attach File                                           ">
+                        <inset key="imageEdgeInsets" minX="210" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="  Attach File                                           ">
                             <color key="titleColor" systemColor="labelColor"/>
-                            <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large" renderingMode="original"/>
-                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="semibold"/>
                         </state>
                     </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BHQ-cn-QVh">
+                        <rect key="frame" x="270" y="18" width="50" height="41.5"/>
+                        <color key="tintColor" red="0.32549019610000002" green="0.56470588239999997" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <imageReference key="image" image="plus.circle" catalog="system" symbolScale="small" renderingMode="template"/>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="f7n-05-162" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="BpF-Pf-CkM"/>
-                    <constraint firstAttribute="trailing" secondItem="f7n-05-162" secondAttribute="trailing" constant="15" id="ElB-Rb-HTc"/>
-                    <constraint firstItem="f7n-05-162" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="GvC-0j-drv"/>
-                    <constraint firstAttribute="bottom" secondItem="f7n-05-162" secondAttribute="bottom" constant="10" id="we1-C3-49m"/>
+                    <constraint firstItem="f7n-05-162" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0xq-LU-Ejh"/>
+                    <constraint firstAttribute="bottom" secondItem="f7n-05-162" secondAttribute="bottom" constant="15" id="C4e-Th-HGH"/>
+                    <constraint firstItem="BHQ-cn-QVh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="270" id="IXu-aY-1pl"/>
+                    <constraint firstAttribute="trailing" secondItem="BHQ-cn-QVh" secondAttribute="trailing" id="Zqo-TX-0xb"/>
+                    <constraint firstItem="f7n-05-162" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="as3-gJ-PCO"/>
+                    <constraint firstItem="BHQ-cn-QVh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="onr-bI-aQ2"/>
+                    <constraint firstAttribute="trailing" secondItem="f7n-05-162" secondAttribute="trailing" constant="20" id="wbd-nq-LVD"/>
+                    <constraint firstAttribute="bottom" secondItem="BHQ-cn-QVh" secondAttribute="bottom" constant="17" id="yg0-Vl-h2h"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
