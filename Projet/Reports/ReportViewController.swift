@@ -18,6 +18,9 @@ class ReportViewController: UIViewController, CLLocationManagerDelegate, UITable
     var reportArray : [ReportCell] = [.textCell("Name"), .textCell("Location/Region"), .streetCell, .textCell("Description"), .fileCell, .saveCell]
     
     var locationManager: CLLocationManager = CLLocationManager()
+//    if let view = UIStoryboard(name: "Category", bundle: nil).instantiateViewController(identifier: "ReportStep2ViewController") as? ReportStep2ViewController {
+//        self.navigationController?.pushViewController(view, animated: true)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return loginArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

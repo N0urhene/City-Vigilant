@@ -3,13 +3,14 @@ import UIKit
 
 enum ProfileCell {
     case UserNameCell
-    case ProfileCell(String)
+    case AccountCell(String)
+    case ProfileCell(String, UIImage)
     
 }
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var profileArray: [ProfileCell] = [.UserNameCell, .ProfileCell("ACCOUNT SETTINGS"), .ProfileCell("Personal information"), .ProfileCell("Notifications"), .ProfileCell("Posts"), .ProfileCell("Donation"), .ProfileCell("LEGAL"),.ProfileCell("Terms of service"), .ProfileCell("Log out")]
+    var profileArray: [ProfileCell] = [.UserNameCell, .AccountCell("ACCOUNT SETTINGS") ,.ProfileCell("Personal information", UIImage(systemName: "person")!), .ProfileCell("Notifications", UIImage(systemName: "bell")!), .ProfileCell("Posts", UIImage(systemName: "text.bubble")!), .ProfileCell("Donation", UIImage(systemName: "creditcard")!), .AccountCell("LEGAL"),.ProfileCell("Terms of service", UIImage(systemName: "doc.plaintext")!), .ProfileCell("Log out", UIImage(systemName: "lock.open")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,18 +31,22 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         switch cellType {
         case .UserNameCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserNameCell", for: indexPath) as! UserNameCell
-    
             return cell
-        case .ProfileCell(let value):
+            
+        case .AccountCell(let value):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath) as! AccountCell
+            cell.label.text = value
+            return cell
+            
+        case .ProfileCell(let value, let icons):
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileTableViewCell
             cell.labelView.text = value
-            cell.icon.image = UIImage()
+            cell.icon.image = icons
             return cell
+            
         default:
             break
         }
         return UITableViewCell()
     }
-    
-    
 }

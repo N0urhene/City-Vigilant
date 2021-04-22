@@ -4,10 +4,10 @@ import Amplify
 import AmplifyPlugins
 
 class DataViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         userData()
         reportData()
     }
@@ -23,9 +23,9 @@ class DataViewController: UIViewController {
             }
         }
     }
-
+    
     func userData() {
-
+        
         Amplify.DataStore.query(User.self) { result in
             switch(result) {
             case .success(let users):
@@ -45,7 +45,7 @@ class DataViewController: UIViewController {
                 print("Could not save item to DataStore: \(error)")
             }
         }
-
+        
     }
     func reportData() {
         Amplify.DataStore.query(Report.self) { Result in
