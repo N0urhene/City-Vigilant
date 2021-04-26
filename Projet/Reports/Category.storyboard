@@ -13,7 +13,7 @@
         <!--Report-->
         <scene sceneID="296-bL-kjc">
             <objects>
-                <viewController id="ZiM-P4-ah4" customClass="ReportStep2ViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZiM-P4-ah4" customClass="ReportCategoriesViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RfE-fd-fhH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-fU-BND">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hHO-Ht-ykC">
                                     <size key="itemSize" width="190" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -28,19 +29,18 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="40B-34-xyi" customClass="Step2CollectionViewCell" customModule="Projet" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="40B-34-xyi" customClass="CategoriesCell" customModule="Projet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zea-vG-1UN">
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YF1-jT-Czz">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YF1-jT-Czz">
                                                     <rect key="frame" x="21" y="15" width="148" height="126"/>
-                                                    <imageReference key="image" image="trash" catalog="system" symbolScale="large" renderingMode="original"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLU-0t-tIq">
-                                                    <rect key="frame" x="69" y="147" width="90" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLU-0t-tIq">
+                                                    <rect key="frame" x="69" y="197" width="90" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -53,6 +53,7 @@
                                                 <constraint firstItem="iLU-0t-tIq" firstAttribute="top" secondItem="YF1-jT-Czz" secondAttribute="bottom" constant="50" id="vVH-N7-jHs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="iconImage" destination="YF1-jT-Czz" id="2g0-If-DtN"/>
                                             <outlet property="label" destination="iLU-0t-tIq" id="yXz-Tv-cJA"/>
@@ -85,7 +86,6 @@
         <!--Report-->
         <scene sceneID="l1J-r4-eoO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1LV-HV-cq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WtY-wH-41v" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Report" selectedImage="exclamationmark.triangle" catalog="system" id="BpF-5b-DUd">
                         <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
@@ -108,13 +108,13 @@
                         <segue destination="ZiM-P4-ah4" kind="relationship" relationship="rootViewController" id="4gH-tE-c1B"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1LV-HV-cq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6442.0289855072469" y="997.76785714285711"/>
+            <point key="canvasLocation" x="-6448" y="998"/>
         </scene>
     </scenes>
     <resources>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
-        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,7 +1,7 @@
 
 import UIKit
 
-class Step2CollectionViewCell: UICollectionViewCell {
+class CategoriesCell: UICollectionViewCell {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
