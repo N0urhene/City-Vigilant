@@ -38,6 +38,7 @@
 		0FF7D310261F1D2700DE6A02 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */; };
 		0FF7D318261FBE7900DE6A02 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */; };
 		0FFBFFE92630707A006BF96D /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBFFE82630707A006BF96D /* AccountCell.swift */; };
+		0FFBFFF72636C7F0006BF96D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBFFF62636C7F0006BF96D /* TabBarController.swift */; };
 		0FFC2662262220A10015249E /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFC2661262220A10015249E /* Category.storyboard */; };
 		0FFC266A2623511A0015249E /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC26692623511A0015249E /* CategoriesCell.swift */; };
 		0FFC2675262398190015249E /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC2674262398190015249E /* DataViewController.swift */; };
@@ -108,6 +109,7 @@
 		0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0FFBFFE82630707A006BF96D /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		0FFBFFF62636C7F0006BF96D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0FFC2661262220A10015249E /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		0FFC26692623511A0015249E /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		0FFC2674262398190015249E /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				0F8BD77F2611CC0500122DC7 /* AppDelegate.swift */,
 				0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */,
+				0FFBFFF62636C7F0006BF96D /* TabBarController.swift */,
 				0FF7D2A5261DA86800DE6A02 /* Home */,
 				0FF7D2A4261DA85F00DE6A02 /* Profile */,
 				0FF7D299261DA7C700DE6A02 /* Reports */,
@@ -610,6 +613,7 @@
 				0F84C0FB26244C9C004C5FDE /* Categories.swift in Sources */,
 				0FFBFFE92630707A006BF96D /* AccountCell.swift in Sources */,
 				0F3C2DDB262EE551000271DD /* SaveReportCell.swift in Sources */,
+				0FFBFFF72636C7F0006BF96D /* TabBarController.swift in Sources */,
 				D939C1CE8F714880A47071C6 /* User.swift in Sources */,
 				0F84C1002629BED4004C5FDE /* ButtonTableViewCell.swift in Sources */,
 				580FE6BA75A14DB9891AB52F /* User+Schema.swift in Sources */,
