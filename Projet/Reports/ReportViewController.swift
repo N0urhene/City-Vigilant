@@ -53,22 +53,11 @@ class ReportViewController: UIViewController, CLLocationManagerDelegate, UITable
             
             return cell
         case .fileCell:
+            print("fileCell !!!!!")
             let cel = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
-//            let vc = UIImagePickerController()
-//            vc.sourceType = .camera
-//            vc.allowsEditing = true
-//            vc.delegate = self
-//            present(vc, animated: true)
-            func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-                picker.dismiss(animated: true)
-                
-                guard let image = info[.editedImage] as? UIImage else {
-                    print("No image found")
-                    return
-                }
-                print(image.size)
-            }
-        //    cel.CameraImageView.image = UIImagePickerController()
+            
+
+            //    cel.CameraImageView.image = UIImagePickerController()
             return cel
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell
@@ -78,6 +67,24 @@ class ReportViewController: UIViewController, CLLocationManagerDelegate, UITable
         }
         
     }
+    
+    func openCamera() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
+    }
+    
+//    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        picker.dismiss(animated: true)
+//        
+//        guard let image = info[.editedImage] as? UIImage else {
+//            print("No image found")
+//            return
+//        }
+//        print(image.size)
+//    }
     
     func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways {

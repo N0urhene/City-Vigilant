@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mH1-Yq-mfg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -13,11 +13,11 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="JGi-M6-h6S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="hE2-xr-Z5C">
@@ -40,10 +40,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="W2R-zT-N3g"/>
                         <segue destination="KpK-l1-owV" kind="relationship" relationship="viewControllers" id="awJ-5k-3iO"/>
                         <segue destination="ZdP-Fe-5nG" kind="relationship" relationship="viewControllers" id="Yq7-D6-3HI"/>
-                        <segue destination="sMY-d3-lDe" kind="relationship" relationship="viewControllers" id="vYc-Dg-Rnx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZK-CW-fVB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,16 +109,16 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="ooZ-N0-P2q"/>
+                        <viewLayoutGuide key="safeArea" id="4m1-JO-R3v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="C57-3I-Fd6" firstAttribute="trailing" secondItem="ooZ-N0-P2q" secondAttribute="trailing" id="18J-98-9Sh"/>
-                            <constraint firstItem="C57-3I-Fd6" firstAttribute="leading" secondItem="ooZ-N0-P2q" secondAttribute="leading" id="9yn-V5-7AV"/>
-                            <constraint firstItem="C57-3I-Fd6" firstAttribute="top" secondItem="ooZ-N0-P2q" secondAttribute="top" id="DJu-UB-4wK"/>
-                            <constraint firstItem="C57-3I-Fd6" firstAttribute="bottom" secondItem="ooZ-N0-P2q" secondAttribute="bottom" id="OfK-cM-Kfd"/>
-                            <constraint firstItem="C57-3I-Fd6" firstAttribute="leading" secondItem="ooZ-N0-P2q" secondAttribute="leading" id="Vzs-51-udp"/>
-                            <constraint firstItem="ooZ-N0-P2q" firstAttribute="bottom" secondItem="C57-3I-Fd6" secondAttribute="bottom" id="Z6o-f4-LXx"/>
-                            <constraint firstItem="ooZ-N0-P2q" firstAttribute="trailing" secondItem="C57-3I-Fd6" secondAttribute="trailing" id="nUJ-Hj-tbR"/>
+                            <constraint firstItem="C57-3I-Fd6" firstAttribute="trailing" secondItem="4m1-JO-R3v" secondAttribute="trailing" id="18J-98-9Sh"/>
+                            <constraint firstItem="C57-3I-Fd6" firstAttribute="leading" secondItem="4m1-JO-R3v" secondAttribute="leading" id="9yn-V5-7AV"/>
+                            <constraint firstItem="C57-3I-Fd6" firstAttribute="top" secondItem="4m1-JO-R3v" secondAttribute="top" id="DJu-UB-4wK"/>
+                            <constraint firstItem="C57-3I-Fd6" firstAttribute="bottom" secondItem="4m1-JO-R3v" secondAttribute="bottom" id="OfK-cM-Kfd"/>
+                            <constraint firstItem="C57-3I-Fd6" firstAttribute="leading" secondItem="4m1-JO-R3v" secondAttribute="leading" id="Vzs-51-udp"/>
+                            <constraint firstItem="4m1-JO-R3v" firstAttribute="bottom" secondItem="C57-3I-Fd6" secondAttribute="bottom" id="Z6o-f4-LXx"/>
+                            <constraint firstItem="4m1-JO-R3v" firstAttribute="trailing" secondItem="C57-3I-Fd6" secondAttribute="trailing" id="nUJ-Hj-tbR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Report" id="wQ2-46-hf5"/>
@@ -130,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnw-Nc-bYZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962" y="657"/>
+            <point key="canvasLocation" x="1787" y="725"/>
         </scene>
         <!--User Name-->
         <scene sceneID="dAC-An-tsM">
@@ -266,13 +264,13 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="pim-Z3-HlV"/>
+                        <viewLayoutGuide key="safeArea" id="Bci-wt-mAT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pim-Z3-HlV" firstAttribute="trailing" secondItem="ZDr-54-N6r" secondAttribute="trailing" id="F2R-ib-S95"/>
-                            <constraint firstItem="pim-Z3-HlV" firstAttribute="bottom" secondItem="ZDr-54-N6r" secondAttribute="bottom" id="FIg-yh-Puz"/>
-                            <constraint firstItem="ZDr-54-N6r" firstAttribute="top" secondItem="pim-Z3-HlV" secondAttribute="top" id="biS-2l-LH8"/>
-                            <constraint firstItem="ZDr-54-N6r" firstAttribute="leading" secondItem="pim-Z3-HlV" secondAttribute="leading" id="dSe-p6-gTh"/>
+                            <constraint firstItem="Bci-wt-mAT" firstAttribute="trailing" secondItem="ZDr-54-N6r" secondAttribute="trailing" id="F2R-ib-S95"/>
+                            <constraint firstItem="Bci-wt-mAT" firstAttribute="bottom" secondItem="ZDr-54-N6r" secondAttribute="bottom" id="FIg-yh-Puz"/>
+                            <constraint firstItem="ZDr-54-N6r" firstAttribute="top" secondItem="Bci-wt-mAT" secondAttribute="top" id="biS-2l-LH8"/>
+                            <constraint firstItem="ZDr-54-N6r" firstAttribute="leading" secondItem="Bci-wt-mAT" secondAttribute="leading" id="dSe-p6-gTh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="CsK-lt-JoY">
@@ -294,7 +292,7 @@
                     <view key="view" contentMode="scaleToFill" id="S5a-ce-3uy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="i2e-Sm-OJK"/>
+                        <viewLayoutGuide key="safeArea" id="eWT-vT-LRL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Posts" id="8RA-Tx-Ge0">
@@ -309,13 +307,13 @@
         <!--Report-->
         <scene sceneID="tRm-sO-K0A">
             <objects>
-                <viewController id="UZf-sE-5o1" customClass="ReportCategoriesViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportCategoriesViewController" id="UZf-sE-5o1" customClass="ReportCategoriesViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x5F-3g-Gev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xi5-uh-7VB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yOe-9s-cPM">
@@ -325,7 +323,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="CategoriesCell" id="gBs-rB-Wk0" customClass="CategoriesCell" customModule="Projet" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="CategoriesCell" id="gBs-rB-Wk0" customClass="CategoriesCell" customModule="Projet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S5q-G8-DbI">
@@ -371,52 +369,28 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="5Dp-Aj-tlh"/>
+                        <viewLayoutGuide key="safeArea" id="IBL-P9-hJl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xi5-uh-7VB" firstAttribute="leading" secondItem="5Dp-Aj-tlh" secondAttribute="leading" id="1eK-L4-e7l"/>
-                            <constraint firstItem="Xi5-uh-7VB" firstAttribute="top" secondItem="5Dp-Aj-tlh" secondAttribute="top" id="9tr-el-eDK"/>
-                            <constraint firstItem="5Dp-Aj-tlh" firstAttribute="bottom" secondItem="Xi5-uh-7VB" secondAttribute="bottom" id="FGu-Ik-RYW"/>
-                            <constraint firstItem="5Dp-Aj-tlh" firstAttribute="trailing" secondItem="Xi5-uh-7VB" secondAttribute="trailing" id="H3u-XQ-nrL"/>
+                            <constraint firstItem="Xi5-uh-7VB" firstAttribute="leading" secondItem="IBL-P9-hJl" secondAttribute="leading" id="1eK-L4-e7l"/>
+                            <constraint firstItem="Xi5-uh-7VB" firstAttribute="top" secondItem="x5F-3g-Gev" secondAttribute="top" id="9tr-el-eDK"/>
+                            <constraint firstItem="IBL-P9-hJl" firstAttribute="bottom" secondItem="Xi5-uh-7VB" secondAttribute="bottom" id="FGu-Ik-RYW"/>
+                            <constraint firstItem="IBL-P9-hJl" firstAttribute="trailing" secondItem="Xi5-uh-7VB" secondAttribute="trailing" id="H3u-XQ-nrL"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Report" id="V2i-nc-AuQ">
+                        <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="exclamationmark.triangle" catalog="system" symbolScale="large" renderingMode="template"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Report" id="3K6-kK-Ux0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Xi5-uh-7VB" id="fon-KM-ndT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwG-qW-wjh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962.3188405797105" y="-44.196428571428569"/>
-        </scene>
-        <!--Report-->
-        <scene sceneID="4fx-if-FeG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sMY-d3-lDe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Report" id="XkI-5y-3sb">
-                        <imageReference key="image" image="exclamationmark.triangle" catalog="system" symbolScale="large"/>
-                        <imageReference key="selectedImage" image="exclamationmark.triangle" catalog="system" symbolScale="large" renderingMode="template"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FR7-Zv-QXI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                            <color key="textColor" red="0.32549019610000002" green="0.56470588239999997" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UZf-sE-5o1" kind="relationship" relationship="rootViewController" id="hTv-o0-Cw6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O6l-cR-mrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2178" y="-43"/>
+            <point key="canvasLocation" x="1007" y="725"/>
         </scene>
     </scenes>
     <resources>

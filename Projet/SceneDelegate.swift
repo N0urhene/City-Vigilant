@@ -21,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         configureAmplify()
-
+        
+        window?.rootViewController = TabBarController()
+        window?.makeKeyAndVisible()
     }
 
     
