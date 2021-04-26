@@ -18,54 +18,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="402" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attach file" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-IZ-611">
-                        <rect key="frame" x="20" y="18" width="91" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attach file" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-IZ-611">
+                        <rect key="frame" x="11" y="18" width="91" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qa9-WL-U5h">
-                        <rect key="frame" x="20" y="57" width="30" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <imageReference key="image" image="camera.fill" catalog="system" symbolScale="small" renderingMode="original"/>
-                    </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwM-SX-JnO">
-                        <rect key="frame" x="75" y="57.5" width="30" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <imageReference key="image" image="photo.fill" catalog="system" symbolScale="small" renderingMode="original"/>
-                    </imageView>
-                    <view contentMode="scaleToFill" id="Zfy-YQ-EX2">
-                        <rect key="frame" x="20" y="113" width="374" height="1"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6v-Do-eyo">
+                        <rect key="frame" x="10" y="117" width="382" height="1"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="PGw-te-TSg"/>
+                            <constraint firstAttribute="height" constant="1" id="YDU-D3-fMD"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kDP-KN-bff">
-                        <rect key="frame" x="131" y="59.5" width="30" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <imageReference key="image" image="paperclip" catalog="system" symbolScale="small" renderingMode="original"/>
-                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRH-f3-cIM">
+                        <rect key="frame" x="11" y="52" width="49" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="Aex-4Q-wKQ"/>
+                            <constraint firstAttribute="width" constant="49" id="Crv-me-a41"/>
+                        </constraints>
+                        <state key="normal">
+                            <imageReference key="image" image="camera.fill" catalog="system" renderingMode="original"/>
+                        </state>
+                        <connections>
+                            <action selector="cameraAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TlS-OR-deE"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="N6v-Do-eyo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="J48-KJ-3MO"/>
+                    <constraint firstItem="E5x-IZ-611" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Zhz-Ph-RRW"/>
+                    <constraint firstItem="E5x-IZ-611" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="bGf-2p-VoA"/>
+                    <constraint firstItem="N6v-Do-eyo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eJX-Oc-zsU"/>
+                    <constraint firstAttribute="bottom" secondItem="N6v-Do-eyo" secondAttribute="bottom" constant="2" id="f4A-z2-Vrc"/>
+                    <constraint firstItem="TRH-f3-cIM" firstAttribute="leading" secondItem="E5x-IZ-611" secondAttribute="leading" id="i4u-t0-lzt"/>
+                    <constraint firstItem="TRH-f3-cIM" firstAttribute="top" secondItem="E5x-IZ-611" secondAttribute="bottom" constant="10" id="thN-sc-Ach"/>
+                    <constraint firstAttribute="trailing" secondItem="N6v-Do-eyo" secondAttribute="trailing" constant="10" id="vZX-UT-ios"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="CameraImageView" destination="qa9-WL-U5h" id="Fec-ed-vPo"/>
-                <outlet property="FileImageView" destination="kDP-KN-bff" id="vBS-8g-LWn"/>
                 <outlet property="fileLabel" destination="E5x-IZ-611" id="hLH-rE-ENo"/>
-                <outlet property="photoImageView" destination="lwM-SX-JnO" id="Dv5-Bv-phi"/>
             </connections>
-            <point key="canvasLocation" x="-2.8985507246376816" y="93.080357142857139"/>
+            <point key="canvasLocation" x="24.637681159420293" y="118.52678571428571"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
-        <image name="paperclip" catalog="system" width="121" height="128"/>
-        <image name="photo.fill" catalog="system" width="128" height="93"/>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

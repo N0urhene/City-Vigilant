@@ -1,5 +1,5 @@
 //
-//  FileReportCell.swift
+//  FileReportCellCell.swift
 //  Projet
 //
 //  Created by nourhene on 20/04/2021.
@@ -9,15 +9,19 @@ import UIKit
 
 class FileReportCell: UITableViewCell {
 
+    @IBOutlet weak var fileLabel: UILabel!
+    
+    var val = {}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    @IBAction func cameraAction(_ sender: Any) {
+//        openCamera()
+        val()
     }
-
+    
 }

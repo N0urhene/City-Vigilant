@@ -7,6 +7,7 @@ enum CategoryCell {
 class ReportCategoriesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var categoryArray: [CategoryCell] = [.CategoriesCell(UIImage(systemName: "map")!, "Roadway"), .CategoriesCell(UIImage(systemName: "xmark.bin")!, "Garbage/ Trash"), .CategoriesCell(UIImage(systemName: "lightbulb")!, "Public lighting"), .CategoriesCell(UIImage(systemName: "trash")!, "Cleanliness"), .CategoriesCell(UIImage(systemName: "car")!, "Vehicles/ Parking"),   .CategoriesCell(UIImage(systemName: "leaf")!, "Green space"), .CategoriesCell(UIImage(systemName: "questionmark.circle")!, "More")]
     
     override func viewDidLoad() {
@@ -53,7 +54,7 @@ class ReportCategoriesViewController: UIViewController, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ReportViewController") as? ReportViewController {
             
-            self.navigationController?.pushViewController(view, animated: true)
+            navigationController?.pushViewController(view, animated: true)
         }
     }
 }

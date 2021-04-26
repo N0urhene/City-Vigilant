@@ -11,10 +11,16 @@ enum ReportCell {
     case saveCell
 }
 
-class ReportViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ReportViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var reportArray : [ReportCell] = [.textCell("Name"), .textCell("Location/Region"), .streetCell, .textCell("Description"), .fileCell, .saveCell]
+    
+    var reportArray : [ReportCell] = [.textCell("Name"),
+                                      .textCell("Location/Region"),
+                                      .streetCell,
+                                      .textCell("Description"),
+                                      .fileCell, .saveCell]
+    
     var locationManager: CLLocationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -30,9 +36,41 @@ class ReportViewController: UIViewController, CLLocationManagerDelegate, UITable
         locationManager.startUpdatingLocation()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+    private func openCamera() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
     }
+    
+//    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        picker.dismiss(animated: true)
+//
+//        guard let image = info[.editedImage] as? UIImage else {
+//            print("No image found")
+//            return
+//        }
+//        print(image.size)
+//    }
+    
+}
+
+//MARK: Protocol CLLocationManagerDelegate
+extension ReportViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+                if CLLocationManager.isRangingAvailable() {
+                    locationManager.startUpdatingLocation()
+                }
+            }
+        }
+    }
+}
+
+//MARK: Protocol UITableViewDataSource
+extension ReportViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reportArray.count
@@ -54,45 +92,28 @@ class ReportViewController: UIViewController, CLLocationManagerDelegate, UITable
             return cell
         case .fileCell:
             print("fileCell !!!!!")
-            let cel = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
+            cell.val = openCamera
 
             //    cel.CameraImageView.image = UIImagePickerController()
-            return cel
+            return cell
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell
             return cell
         default:
             return UITableViewCell()
         }
-        
     }
-    
-    func openCamera() {
-        let vc = UIImagePickerController()
-        vc.sourceType = .camera
-        vc.allowsEditing = true
-        vc.delegate = self
-        present(vc, animated: true)
+}
+
+//MARK: Protocol UITableViewDelegate
+extension ReportViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120.0
     }
+}
+
+//MARK: Protocol UINavigationControllerDelegate, UIImagePickerControllerDelegate
+extension ReportViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-//    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        picker.dismiss(animated: true)
-//        
-//        guard let image = info[.editedImage] as? UIImage else {
-//            print("No image found")
-//            return
-//        }
-//        print(image.size)
-//    }
-    
-    func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse || status == .authorizedAlways {
-            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
-                if CLLocationManager.isRangingAvailable() {
-                    locationManager.startUpdatingLocation()
-                }
-            }
-        }
-    }
 }
