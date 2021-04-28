@@ -133,7 +133,7 @@
         <!--User Name-->
         <scene sceneID="dAC-An-tsM">
             <objects>
-                <viewController id="ZdP-Fe-5nG" customClass="ProfileViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="ZdP-Fe-5nG" customClass="ProfileViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A2b-Qz-29a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,7 +288,7 @@
         <!--Posts-->
         <scene sceneID="3mu-68-rwj">
             <objects>
-                <viewController id="KpK-l1-owV" customClass="PostsViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostsViewController" id="KpK-l1-owV" customClass="PostsViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S5a-ce-3uy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

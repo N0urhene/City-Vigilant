@@ -31,17 +31,21 @@ class ReportViewController: UIViewController {
         tableView.register(UINib(nibName: "SaveReportCell", bundle: nil), forCellReuseIdentifier: "SaveReportCell")
         tableView.register(UINib(nibName: "StreetReportCell", bundle: nil), forCellReuseIdentifier: "StreetReportCell")
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+       
     }
-    
+
     private func openCamera() {
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         vc.allowsEditing = true
         vc.delegate = self
         present(vc, animated: true)
+    }
+    private func importImage() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
     }
     
 //    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -56,18 +60,7 @@ class ReportViewController: UIViewController {
     
 }
 
-//MARK: Protocol CLLocationManagerDelegate
-extension ReportViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse || status == .authorizedAlways {
-            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
-                if CLLocationManager.isRangingAvailable() {
-                    locationManager.startUpdatingLocation()
-                }
-            }
-        }
-    }
-}
+
 
 //MARK: Protocol UITableViewDataSource
 extension ReportViewController: UITableViewDataSource {
@@ -88,14 +81,13 @@ extension ReportViewController: UITableViewDataSource {
             return cell
         case.streetCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "StreetReportCell", for: indexPath) as! StreetReportCell
-            
+
             return cell
-        case .fileCell:
-            print("fileCell !!!!!")
+        case .fileCell: 
             let cell = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
             cell.val = openCamera
+            cell.pic = importImage
 
-            //    cel.CameraImageView.image = UIImagePickerController()
             return cell
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell

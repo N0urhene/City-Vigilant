@@ -26,6 +26,9 @@
                         <rect key="frame" x="344" y="23" width="33" height="66"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <state key="normal" title="Add"/>
+                        <connections>
+                            <action selector="add:" destination="30z-un-o3G" eventType="touchUpInside" id="bn7-Cq-K2p"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" id="r1y-bf-dIb">
                         <rect key="frame" x="13" y="112" width="374" height="1"/>
@@ -47,6 +50,10 @@
                     <constraint firstAttribute="bottom" secondItem="jvX-NO-00J" secondAttribute="bottom" id="fwX-yz-5hT"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="addButton" destination="6x8-gm-ifD" id="VQ9-v7-3F7"/>
+                <outlet property="label" destination="jvX-NO-00J" id="Fl2-so-Ety"/>
+            </connections>
             <point key="canvasLocation" x="-255.07246376811597" y="53.90625"/>
         </tableViewCell>
     </objects>

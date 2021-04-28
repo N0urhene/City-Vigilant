@@ -19,20 +19,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attach file" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-IZ-611">
-                        <rect key="frame" x="11" y="18" width="91" height="24"/>
+                        <rect key="frame" x="20" y="18" width="91" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6v-Do-eyo">
-                        <rect key="frame" x="10" y="117" width="382" height="1"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <rect key="frame" x="20" y="117" width="362" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="YDU-D3-fMD"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRH-f3-cIM">
-                        <rect key="frame" x="11" y="52" width="49" height="44"/>
+                        <rect key="frame" x="20" y="52" width="49" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="Aex-4Q-wKQ"/>
                             <constraint firstAttribute="width" constant="49" id="Crv-me-a41"/>
@@ -44,16 +44,52 @@
                             <action selector="cameraAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TlS-OR-deE"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64d-eI-WPD">
+                        <rect key="frame" x="74" y="52" width="49" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="ZaX-GY-Vdw"/>
+                            <constraint firstAttribute="width" constant="49" id="luR-m8-GCx"/>
+                        </constraints>
+                        <state key="normal">
+                            <imageReference key="image" image="photo.fill" catalog="system" renderingMode="original"/>
+                        </state>
+                        <connections>
+                            <action selector="cameraAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qTg-W3-8Gn"/>
+                            <action selector="photoAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zrJ-Dm-JTz"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uR-aN-wqK">
+                        <rect key="frame" x="128" y="51" width="49" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="BR9-lF-Kj9"/>
+                            <constraint firstAttribute="width" constant="49" id="utf-Sk-gF2"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal">
+                            <imageReference key="image" image="paperclip" catalog="system" renderingMode="template"/>
+                        </state>
+                        <connections>
+                            <action selector="cameraAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cJW-hM-2Bf"/>
+                            <action selector="fileAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="U1L-jR-ExK"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="N6v-Do-eyo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="J48-KJ-3MO"/>
+                    <constraint firstItem="4uR-aN-wqK" firstAttribute="width" secondItem="64d-eI-WPD" secondAttribute="width" id="EHq-jc-I6C"/>
+                    <constraint firstItem="N6v-Do-eyo" firstAttribute="top" secondItem="4uR-aN-wqK" secondAttribute="bottom" constant="22" id="HWf-LO-YvV"/>
+                    <constraint firstItem="64d-eI-WPD" firstAttribute="leading" secondItem="TRH-f3-cIM" secondAttribute="trailing" constant="5" id="IJa-0r-nhO"/>
+                    <constraint firstItem="N6v-Do-eyo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="J48-KJ-3MO"/>
+                    <constraint firstItem="4uR-aN-wqK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="51" id="JyM-tB-llY"/>
                     <constraint firstItem="E5x-IZ-611" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Zhz-Ph-RRW"/>
-                    <constraint firstItem="E5x-IZ-611" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="bGf-2p-VoA"/>
+                    <constraint firstItem="E5x-IZ-611" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bGf-2p-VoA"/>
                     <constraint firstItem="N6v-Do-eyo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eJX-Oc-zsU"/>
                     <constraint firstAttribute="bottom" secondItem="N6v-Do-eyo" secondAttribute="bottom" constant="2" id="f4A-z2-Vrc"/>
                     <constraint firstItem="TRH-f3-cIM" firstAttribute="leading" secondItem="E5x-IZ-611" secondAttribute="leading" id="i4u-t0-lzt"/>
+                    <constraint firstItem="64d-eI-WPD" firstAttribute="top" secondItem="E5x-IZ-611" secondAttribute="bottom" constant="10" id="puM-H1-AVW"/>
+                    <constraint firstItem="N6v-Do-eyo" firstAttribute="top" secondItem="64d-eI-WPD" secondAttribute="bottom" constant="21" id="r8b-2l-zVT"/>
+                    <constraint firstItem="4uR-aN-wqK" firstAttribute="leading" secondItem="64d-eI-WPD" secondAttribute="trailing" constant="5" id="tKC-Fg-Ldg"/>
                     <constraint firstItem="TRH-f3-cIM" firstAttribute="top" secondItem="E5x-IZ-611" secondAttribute="bottom" constant="10" id="thN-sc-Ach"/>
-                    <constraint firstAttribute="trailing" secondItem="N6v-Do-eyo" secondAttribute="trailing" constant="10" id="vZX-UT-ios"/>
+                    <constraint firstAttribute="trailing" secondItem="N6v-Do-eyo" secondAttribute="trailing" constant="20" id="vZX-UT-ios"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -65,8 +101,13 @@
     </objects>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="paperclip" catalog="system" width="121" height="128"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

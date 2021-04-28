@@ -1,9 +1,3 @@
-//
-//  TabBarController.swift
-//  Projet
-//
-//  Created by nourhene on 26/04/2021.
-//
 
 import UIKit
 
@@ -22,13 +16,10 @@ class TabBarController: UITabBarController {
         let reportNav = UINavigationController(rootViewController: reportCategoriesViewController)
         reportNav.navigationBar.prefersLargeTitles = true
         reportNav.navigationBar.backgroundColor = .white
-        
-        let viewcontrollerVert = UIViewController()
-        viewcontrollerVert.view.backgroundColor = .green
-        viewcontrollerVert.title = "vert"
+        let PostsViewController = mainStoryboard.instantiateViewController(withIdentifier: "PostsViewController")
+        let ProfileViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
 
-
-        setViewControllers([homeVC, reportNav, viewcontrollerVert], animated: true)
+        setViewControllers([homeVC, PostsViewController, reportNav, ProfileViewController], animated: true)
     }
     
 }
