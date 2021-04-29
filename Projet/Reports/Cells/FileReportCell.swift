@@ -13,12 +13,14 @@ class FileReportCell: UITableViewCell {
     
     var val = {}
     var pic = {}
+    var file = {}
     
     override func awakeFromNib() {
         super.awakeFromNib()
 
     }
     @IBAction func fileAction(_ sender: Any) {
+        file()
     }
     
     @IBAction func photoAction(_ sender: Any) {

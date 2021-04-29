@@ -3,6 +3,8 @@ import Amplify
 import MapKit
 import CoreLocation
 import AmplifyPlugins
+import MobileCoreServices
+import Photos
 
 enum ReportCell {
     case textCell(String)
@@ -31,9 +33,9 @@ class ReportViewController: UIViewController {
         tableView.register(UINib(nibName: "SaveReportCell", bundle: nil), forCellReuseIdentifier: "SaveReportCell")
         tableView.register(UINib(nibName: "StreetReportCell", bundle: nil), forCellReuseIdentifier: "StreetReportCell")
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
-       
+        
     }
-
+    
     private func openCamera() {
         let vc = UIImagePickerController()
         vc.sourceType = .camera
@@ -43,24 +45,42 @@ class ReportViewController: UIViewController {
     }
     private func importImage() {
         let picker = UIImagePickerController()
+        
         picker.allowsEditing = true
         picker.delegate = self
-        present(picker, animated: true)
+        if UI_USER_INTERFACE_IDIOM() == .pad {
+            OperationQueue.main.addOperation({() -> Void in
+                picker.sourceType = .photoLibrary
+                self.present(picker, animated: true) {() -> Void in }
+            })
+        }
+        else {
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true) {() -> Void in }
+        }
+}
+    func checkLibrary() {
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .authorized {
+            switch photos {
+            case .authorized:
+                self.importImage()
+            case .denied:
+                print("Error")
+            default:
+                break
+            }
+        }
     }
-    
-//    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        picker.dismiss(animated: true)
-//
-//        guard let image = info[.editedImage] as? UIImage else {
-//            print("No image found")
-//            return
-//        }
-//        print(image.size)
-//    }
+private func attachDocument() {
+    let types = [kUTTypePDF, kUTTypeText, kUTTypeRTF, kUTTypeSpreadsheet]
+    let importMenu = UIDocumentPickerViewController(documentTypes: types as [String], in: .import )
+    importMenu.delegate = self
+    importMenu.modalPresentationStyle = .formSheet
+    present(importMenu, animated: true)
     
 }
-
-
+}
 
 //MARK: Protocol UITableViewDataSource
 extension ReportViewController: UITableViewDataSource {
@@ -81,13 +101,13 @@ extension ReportViewController: UITableViewDataSource {
             return cell
         case.streetCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "StreetReportCell", for: indexPath) as! StreetReportCell
-
+            
             return cell
         case .fileCell: 
             let cell = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
             cell.val = openCamera
             cell.pic = importImage
-
+            cell.file = attachDocument()
             return cell
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell
@@ -108,4 +128,29 @@ extension ReportViewController: UITableViewDelegate {
 //MARK: Protocol UINavigationControllerDelegate, UIImagePickerControllerDelegate
 extension ReportViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        guard let image = info[.editedImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+        print(image.size)
+    }
 }
+//MARK: Protocol UIDocumentPickerDelegate
+extension ReportViewController: UIDocumentPickerDelegate{
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let selectedFileURL = urls.first else { return }
+        
+        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let sandboxFileURL = dir.appendingPathComponent(selectedFileURL.lastPathComponent)
+        
+        //        print(sandboxFileURL.lastPathComponent)
+        //            DispatchQueue.main.async {
+        //                self.attachDocument().append(sandboxFileURL.lastPathComponent)
+        //            }
+    }
+}
+
+

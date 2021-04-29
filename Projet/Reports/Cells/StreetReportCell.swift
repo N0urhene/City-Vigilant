@@ -2,7 +2,7 @@
 import UIKit
 import CoreLocation
 
-class StreetReportCell: UITableViewCell, CLLocationManagerDelegate{
+class StreetReportCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var addButton: UIButton!
@@ -21,9 +21,9 @@ class StreetReportCell: UITableViewCell, CLLocationManagerDelegate{
     @IBAction func add(_ sender: Any) {
      
     }
-    
+}
     //MARK: Protocol CLLocationManagerDelegate
-    //extension ReportViewController: CLLocationManagerDelegate {
+extension StreetReportCell: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager,didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
