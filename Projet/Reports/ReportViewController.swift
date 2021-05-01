@@ -37,11 +37,22 @@ class ReportViewController: UIViewController {
     }
     
     private func openCamera() {
-        let vc = UIImagePickerController()
-        vc.sourceType = .camera
-        vc.allowsEditing = true
-        vc.delegate = self
-        present(vc, animated: true)
+        if(UIImagePickerController.isSourceTypeAvailable(.camera))
+        {
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.allowsEditing = true
+            vc.delegate = self
+            present(vc, animated: true)
+        }
+        else
+        {
+            let actionController: UIAlertController = UIAlertController(title: "Camera is not available",message: "", preferredStyle: .alert)
+            let cancelAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel) { action -> Void  in
+            }
+            actionController.addAction(cancelAction)
+            self.present(actionController, animated: true, completion: nil)
+        }
     }
     private func importImage() {
         let picker = UIImagePickerController()
@@ -58,7 +69,7 @@ class ReportViewController: UIViewController {
             picker.sourceType = .photoLibrary
             self.present(picker, animated: true) {() -> Void in }
         }
-}
+    }
     func checkLibrary() {
         let photos = PHPhotoLibrary.authorizationStatus()
         if photos == .authorized {
@@ -72,14 +83,14 @@ class ReportViewController: UIViewController {
             }
         }
     }
-private func attachDocument() {
-    let types = [kUTTypePDF, kUTTypeText, kUTTypeRTF, kUTTypeSpreadsheet]
-    let importMenu = UIDocumentPickerViewController(documentTypes: types as [String], in: .import )
-    importMenu.delegate = self
-    importMenu.modalPresentationStyle = .formSheet
-    present(importMenu, animated: true)
-    
-}
+    private func attachDocument() {
+        let types = [kUTTypePDF, kUTTypeText, kUTTypeRTF, kUTTypeSpreadsheet]
+        let importMenu = UIDocumentPickerViewController(documentTypes: types as [String], in: .import )
+        importMenu.delegate = self
+        importMenu.modalPresentationStyle = .formSheet
+        present(importMenu, animated: true)
+        
+    }
 }
 
 //MARK: Protocol UITableViewDataSource
@@ -105,9 +116,9 @@ extension ReportViewController: UITableViewDataSource {
             return cell
         case .fileCell: 
             let cell = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
-            cell.val = openCamera
+           // cell.val = openCamera
             cell.pic = importImage
-            cell.file = attachDocument()
+            cell.file = attachDocument
             return cell
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell
