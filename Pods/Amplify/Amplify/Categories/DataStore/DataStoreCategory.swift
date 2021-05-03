@@ -4,12 +4,13 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 //
+
 import Foundation
+
 final public class DataStoreCategory: Category {
 
     /// Always .dataStore
     public let categoryType: CategoryType = .dataStore
- 
 
     var plugins = [PluginKey: DataStoreCategoryPlugin]()
 
@@ -19,7 +20,7 @@ final public class DataStoreCategory: Category {
         guard isConfigured else {
             preconditionFailure(
                 """
-                \(categoryType.displayName)category is not configured. Call Amplify.configure() before using \
+                \(categoryType.displayName) category is not configured. Call Amplify.configure() before using \
                 any methods on the category.
                 """
             )
@@ -55,6 +56,15 @@ final public class DataStoreCategory: Category {
             let pluginDescription = String(describing: plugin)
             let error = DataStoreError.configuration("Plugin \(pluginDescription) has an empty `key`.",
                 "Set the `key` property for \(String(describing: plugin))")
+            throw error
+        }
+
+        guard !isConfigured else {
+            let pluginDescription = String(describing: plugin)
+            let error = ConfigurationError.amplifyAlreadyConfigured(
+                "\(pluginDescription) cannot be added after `Amplify.configure()`.",
+                "Do not add plugins after calling `Amplify.configure()`."
+            )
             throw error
         }
 

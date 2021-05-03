@@ -226,11 +226,11 @@
 				0FF7D299261DA7C700DE6A02 /* Reports */,
 				0FF7D2A0261DA85100DE6A02 /* Posts */,
 				0F84C1102629C59B004C5FDE /* Register */,
+				0F84C1072629C4B9004C5FDE /* Data */,
 				0F8BD7852611CC0500122DC7 /* Main.storyboard */,
 				0F8BD7882611CC0600122DC7 /* Assets.xcassets */,
 				0F8BD78A2611CC0600122DC7 /* LaunchScreen.storyboard */,
 				0F8BD78D2611CC0600122DC7 /* Info.plist */,
-				0F84C1072629C4B9004C5FDE /* Data */,
 			);
 			path = Projet;
 			sourceTree = "<group>";
