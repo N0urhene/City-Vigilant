@@ -10,6 +10,11 @@
       "StackName": "amplify-city-vigilantes-dev-135317",
       "StackId": "arn:aws:cloudformation:us-east-2:313996001909:stack/amplify-city-vigilantes-dev-135317/86113690-9605-11eb-8273-0a9519bc4280",
       "AmplifyAppId": "d3lt8bjr9sz94l"
+    },
+    "categories": {
+      "auth": {
+        "cityvigilantesbdcfc5e1": {}
+      }
     }
   }
 }

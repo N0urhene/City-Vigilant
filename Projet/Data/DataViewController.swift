@@ -1,49 +1,19 @@
 
 import UIKit
 import Amplify
-import Combine
 import AmplifyPlugins
 
 class DataViewController: UIViewController {
     
-var todoSubscription: AnyCancellable?
+    var reports = [Report]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        subscribeReports()
-        userData()
-        createUserData()
-        reportData()
-        saveReportData()
-    }
-    
-    func subscribeReports() {
-       self.todoSubscription
-           = Amplify.DataStore.publisher(for: Report.self)
-               .sink(receiveCompletion: { completion in
-                   print("Subscription has been completed: \(completion)")
-               }, receiveValue: { mutationEvent in
-                   print("Subscription got this value: \(mutationEvent)")
-
-                   do {
-                     let report = try mutationEvent.decodeModel(as: Report.self)
-
-                     switch mutationEvent.mutationType {
-                     case "create":
-                       print("Created: \(report)")
-                     case "update":
-                       print("Updated: \(report)")
-                     case "delete":
-                       print("Deleted: \(report)")
-                     default:
-                       break
-                     }
-
-                   } catch {
-                     print("Model could not be decoded: \(error)")
-                   }
-               })
+//        ModelRegistry.register(modelType: Report.self)
+      //  getReports()
+        createReport(report)
+        getReports()
     }
     
     func createUserData() {
@@ -90,24 +60,50 @@ var todoSubscription: AnyCancellable?
         }
         
     }
-    func saveReportData() {
-      subscribeReports()
-}
     
-    func reportData() {
-        Amplify.DataStore.query(Report.self) { Result in
-            switch(Result) {
-            case.success(let reports):
-                for report in reports {
-                    print("Name: \(report.name)")
-                if let region = report.region {
-                    print("Location/ Region: \(region)")
+    func createReport(_ report: Report) {
+        Amplify.API.mutate(request: .create(report)) { event in
+            switch event {
+            case.success(let result):
+                switch result {
+                case .success :
+                    print("Successfully created the report")
+                case.failure(let error):
+                    print(" \(error)")
                 }
-                        print("Description: \(description)")
-                    }
-            case.failure(let error):
-                print("\(error)")
+            case.failure(let APIError):
+                print("failed to create a report", APIError)
+                
             }
         }
     }
+    
+    func saveReportData(id: String, name: String, region: String?, description: String) {
+        let item = Report(id: id, name: name, region: region, description: description)
+//        report.append(item)
+        Amplify.DataStore.save(item) { result in
+            switch result {
+            case.success(let savedItem):
+                print("Saved item: \(savedItem.name)")
+            case.failure(let error):
+                print("\(error)")
+                
+            }
+        }
+    }
+    
+    func getReports() {
+        Amplify.API.query(request: .list(Report.self)) { result in
+            do {
+                let reports = try result.get().get()
+                DispatchQueue.main.async {
+                    self.reports = reports
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
+    }
+
 }

@@ -1,13 +1,8 @@
-//
-//  SceneDelegate.swift
-//  Projet
-//
-//  Created by nourhene on 29/03/2021.
-//
 
 import UIKit
 import Amplify
 import AmplifyPlugins
+import AWSAppSync
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -33,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let apiPlugin = AWSAPIPlugin(modelRegistration: AmplifyModels())
         do {
             try Amplify.add(plugin: dataStorePlugin)
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
             try Amplify.add(plugin: apiPlugin)
             try Amplify.configure()
             print("Initialized Amplify");

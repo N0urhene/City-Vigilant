@@ -13,7 +13,7 @@ enum ReportCell {
     case saveCell
 }
 
-class ReportViewController: UIViewController {
+class ReportViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,6 +24,9 @@ class ReportViewController: UIViewController {
                                       .fileCell, .saveCell]
     
     var locationManager: CLLocationManager = CLLocationManager()
+    //    let reportItem: Report
+    //    let onToggleCompleted: (Report) -> Void
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +37,9 @@ class ReportViewController: UIViewController {
         tableView.register(UINib(nibName: "StreetReportCell", bundle: nil), forCellReuseIdentifier: "StreetReportCell")
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
         
+        
     }
+    
     
     private func openCamera() {
         if(UIImagePickerController.isSourceTypeAvailable(.camera))
@@ -116,7 +121,7 @@ extension ReportViewController: UITableViewDataSource {
             return cell
         case .fileCell: 
             let cell = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
-           // cell.val = openCamera
+            // cell.val = openCamera
             cell.pic = importImage
             cell.file = attachDocument
             return cell
@@ -162,6 +167,10 @@ extension ReportViewController: UIDocumentPickerDelegate{
         //                self.attachDocument().append(sandboxFileURL.lastPathComponent)
         //            }
     }
+    //    func toggleCompleted() {
+    //        UIView.animate(withDuration: 2.0) { [self] in
+    //            self.onToggleCompleted(reportItem)
+    //      }
+    //    }
 }
-
 

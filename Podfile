@@ -8,6 +8,9 @@ target 'Projet' do
   pod 'Amplify'
   pod 'AmplifyPlugins/AWSAPIPlugin'
   pod 'AmplifyPlugins/AWSDataStorePlugin'
+  pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
+  pod 'AWSAppSync' 
+
 
   # Pods for Projet
 
