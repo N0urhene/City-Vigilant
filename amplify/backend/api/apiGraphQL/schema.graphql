@@ -1,13 +1,4 @@
 
-type Report
-  @model
-{
-  id: ID!
- name: String!
-  region: String!
-  description: String
-}
-
 type User
 @model
 {
@@ -17,3 +8,13 @@ type User
     phoneNumber: Int
     email: String
 }
+
+type Report
+  @model
+{
+  id: ID!
+ name: String!
+  region: String!
+  description: String
+}
+

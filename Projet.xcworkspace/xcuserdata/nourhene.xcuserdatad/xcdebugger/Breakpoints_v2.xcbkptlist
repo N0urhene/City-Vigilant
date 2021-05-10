@@ -3,4 +3,86 @@
    uuid = "2CBFFD1B-5A5B-4F4F-A059-C684F9A6BF7F"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4F53B64-15BE-41A3-8849-75F789D65817"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Projet/Data/DataViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "getReports()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E4F53B64-15BE-41A3-8849-75F789D65817 - e6dcf9c0fc699fe7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Projet.AmplifyClient.getReports() -&gt; ()"
+                  moduleName = "Projet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nourhene/City-Vigilantes/Projet/Data/DataViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  uuid = "E4F53B64-15BE-41A3-8849-75F789D65817 - d75d445db2afd47c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Result&lt;Swift.Array&lt;Projet.Report&gt;, Amplify.GraphQLResponseError&lt;Swift.Array&lt;Projet.Report&gt;&gt;&gt;, Amplify.APIError&gt;) -&gt; () in Projet.AmplifyClient.getReports() -&gt; ()"
+                  moduleName = "Projet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nourhene/City-Vigilantes/Projet/Data/DataViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5D9F4E9-7634-4476-8149-CE025A999A49"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Projet/Data/DataViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "getReports()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7AE45A41-BB3B-4A1D-9D76-90A8A4FB672F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Projet/Data/DataViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getReports()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

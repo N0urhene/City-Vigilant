@@ -19,11 +19,6 @@ PODS:
     - SQLite.swift (~> 0.12.0)
   - AppSyncRealTimeClient (1.4.4):
     - Starscream (~> 3.1.1)
-  - AWSAppSync (3.2.1):
-    - AppSyncRealTimeClient (~> 1.4)
-    - AWSCore (~> 2.24.0)
-    - ReachabilitySwift (= 5.0.0)
-    - SQLite.swift (~> 0.12.2)
   - AWSAuthCore (2.24.0):
     - AWSCore (= 2.24.0)
   - AWSCognitoIdentityProvider (2.24.0):
@@ -39,7 +34,6 @@ PODS:
   - AWSPluginsCore (1.9.0):
     - Amplify (= 1.9.0)
     - AWSCore (~> 2.24.0)
-  - ReachabilitySwift (5.0.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -50,21 +44,18 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSAPIPlugin
   - AmplifyPlugins/AWSCognitoAuthPlugin
   - AmplifyPlugins/AWSDataStorePlugin
-  - AWSAppSync
 
 SPEC REPOS:
   trunk:
     - Amplify
     - AmplifyPlugins
     - AppSyncRealTimeClient
-    - AWSAppSync
     - AWSAuthCore
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
     - AWSMobileClient
     - AWSPluginsCore
-    - ReachabilitySwift
     - SQLite.swift
     - Starscream
 
@@ -72,17 +63,15 @@ SPEC CHECKSUMS:
   Amplify: fdb7f9aad75a631449e2afb007f78f77deb25a84
   AmplifyPlugins: 5ffbe6b8aedfc19a16074acf7a67e6c237333a34
   AppSyncRealTimeClient: 4479354d262a23d2cc9fea1760f3815b75a4091a
-  AWSAppSync: 4d8c599e29c7a07b0ebd8f4b8fb51a27b88d6ee5
   AWSAuthCore: f5325c5e076e8da6ad66932029ddb04451aa28cd
   AWSCognitoIdentityProvider: 874160e2f79fc957efd28745ee7389bccd59dfaf
   AWSCognitoIdentityProviderASF: a604ce4b892fe7be0729d22a77a36f8b641e35a4
   AWSCore: d5cd1311b33a4ae9faacda839c0ac9fff711cd79
   AWSMobileClient: 0cd4603f1dff10edb1e7b32e07753c864a21c5ed
   AWSPluginsCore: 34b987a116d75fb09852e2812cb53902d72c73c8
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: aea77a5d80d7ca9c5f6e345ea8bc44ce9935c90b
+PODFILE CHECKSUM: 710efd5fcb02fe8ff55e43b5d3b6a43887a9fd61
 
 COCOAPODS: 1.9.3
