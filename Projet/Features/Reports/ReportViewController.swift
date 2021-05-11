@@ -1,14 +1,15 @@
 import UIKit
 import Amplify
-import MapKit
 import CoreLocation
 import AmplifyPlugins
 import MobileCoreServices
 import Photos
 
 enum ReportCell {
-    case textCell(String)
+    case nameCell(String)
+    case locationCell(String)
     case streetCell
+    case descriptionCell(String)
     case fileCell
     case saveCell
 }
@@ -17,16 +18,16 @@ class ReportViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
-    var reportArray : [ReportCell] = [.textCell("Name"),
-                                      .textCell("Location/Region"),
-                                      .streetCell,
-                                      .textCell("Description"),
-                                      .fileCell, .saveCell]
-    
+    var id: String?
+    var name: String?
+    var region: String?
+    var desc: String?
     var locationManager: CLLocationManager = CLLocationManager()
-    //    let reportItem: Report
-    //    let onToggleCompleted: (Report) -> Void
-    
+    var reportArray : [ReportCell] = [.nameCell("Name"),
+                                      .locationCell("Location/Region"),
+                                      .streetCell,
+                                      .descriptionCell("Description"),
+                                      .fileCell, .saveCell]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,16 @@ class ReportViewController: UIViewController{
         tableView.register(UINib(nibName: "SaveReportCell", bundle: nil), forCellReuseIdentifier: "SaveReportCell")
         tableView.register(UINib(nibName: "StreetReportCell", bundle: nil), forCellReuseIdentifier: "StreetReportCell")
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
+    }
+    
+    func newReport() {
+        let report = Report(id : UUID().uuidString,
+                            name: self.name!,
+                        region: self.region,
+                        description: self.desc!)
+        let data = Report(from: report)
+        AmplifyClient.shared.saveReport(data: data)
+                        
     }
 
     private func openCamera() {
@@ -103,14 +114,32 @@ extension ReportViewController: UITableViewDataSource {
         let cellType = reportArray[indexPath.row]
         
         switch cellType {
-        case .textCell(let value):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textViewCell", for: indexPath) as! ReportTableViewCell
+        case .nameCell(let value):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "nameViewCell", for: indexPath) as! NameViewCell
             cell.titleLabel?.text = value
-            cell.subTitleLabel?.placeholder = value
+            cell.subTitleTextField?.placeholder = value
+            cell.getName = { (value : String?) in
+                self.name = value
+            }
+            return cell
+        case .locationCell(let value):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "regionViewCell", for: indexPath) as! RegionViewCell
+            cell.nameLabel?.text = value
+            cell.textField?.placeholder = value
+            cell.getName = { (value : String?) in
+                self.region = value!
+            }
             return cell
         case.streetCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "StreetReportCell", for: indexPath) as! StreetReportCell
-            
+            return cell
+        case .descriptionCell(let value):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "descViewCell", for: indexPath) as! DescriptionViewCell
+            cell.nameLabel?.text = value
+            cell.textField?.placeholder = value
+            cell.getName = { (value : String?) in
+                self.desc = value!
+            }
             return cell
         case .fileCell: 
             let cell = tableView.dequeueReusableCell(withIdentifier: "FileReportCell", for: indexPath) as! FileReportCell
@@ -155,15 +184,10 @@ extension ReportViewController: UIDocumentPickerDelegate{
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let sandboxFileURL = dir.appendingPathComponent(selectedFileURL.lastPathComponent)
         
-        //        print(sandboxFileURL.lastPathComponent)
-        //            DispatchQueue.main.async {
-        //                self.attachDocument().append(sandboxFileURL.lastPathComponent)
-        //            }
+               print(sandboxFileURL.lastPathComponent)
+//                    DispatchQueue.main.async {
+//                        self.attachDocument().append(dir.lastPathComponent)
+//                    }
     }
-    //    func toggleCompleted() {
-    //        UIView.animate(withDuration: 2.0) { [self] in
-    //            self.onToggleCompleted(reportItem)
-    //      }
-    //    }
 }
 

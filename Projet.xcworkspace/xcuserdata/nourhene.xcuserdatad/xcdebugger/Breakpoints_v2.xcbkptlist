@@ -18,38 +18,6 @@
             endingLineNumber = "8"
             landmarkName = "getReports()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E4F53B64-15BE-41A3-8849-75F789D65817 - e6dcf9c0fc699fe7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Projet.AmplifyClient.getReports() -&gt; ()"
-                  moduleName = "Projet"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nourhene/City-Vigilantes/Projet/Data/DataViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "8"
-                  endingLineNumber = "8"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  uuid = "E4F53B64-15BE-41A3-8849-75F789D65817 - d75d445db2afd47c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Result&lt;Swift.Array&lt;Projet.Report&gt;, Amplify.GraphQLResponseError&lt;Swift.Array&lt;Projet.Report&gt;&gt;&gt;, Amplify.APIError&gt;) -&gt; () in Projet.AmplifyClient.getReports() -&gt; ()"
-                  moduleName = "Projet"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nourhene/City-Vigilantes/Projet/Data/DataViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "9"
-                  endingLineNumber = "9"
-                  offsetFromSymbolStart = "160">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

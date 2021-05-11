@@ -2,7 +2,6 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
-import AWSAppSync
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

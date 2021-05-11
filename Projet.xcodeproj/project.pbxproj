@@ -35,7 +35,9 @@
 		0F8BD7C32611D84A00122DC7 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7C22611D84A00122DC7 /* PostsViewController.swift */; };
 		0FADFEB0264220EA00A19317 /* schema.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0FADFEAF264220EA00A19317 /* schema.graphql */; };
 		0FB2B8972619FD9D00EB6DBE /* ReportCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2B8962619FD9D00EB6DBE /* ReportCategoriesViewController.swift */; };
-		0FF7D310261F1D2700DE6A02 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */; };
+		0FF1704126497B9900E1F6DB /* RegionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF1704026497B9900E1F6DB /* RegionViewCell.swift */; };
+		0FF1704626497BBD00E1F6DB /* DescriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF1704526497BBD00E1F6DB /* DescriptionViewCell.swift */; };
+		0FF7D310261F1D2700DE6A02 /* NameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D30F261F1D2700DE6A02 /* NameViewCell.swift */; };
 		0FF7D318261FBE7900DE6A02 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */; };
 		0FFBFFE92630707A006BF96D /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBFFE82630707A006BF96D /* AccountCell.swift */; };
 		0FFBFFF72636C7F0006BF96D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBFFF62636C7F0006BF96D /* TabBarController.swift */; };
@@ -106,7 +108,9 @@
 		0F8BD7C22611D84A00122DC7 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		0FADFEAF264220EA00A19317 /* schema.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/apiGraphQL/schema.graphql; sourceTree = SOURCE_ROOT; };
 		0FB2B8962619FD9D00EB6DBE /* ReportCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCategoriesViewController.swift; sourceTree = "<group>"; };
-		0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		0FF1704026497B9900E1F6DB /* RegionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewCell.swift; sourceTree = "<group>"; };
+		0FF1704526497BBD00E1F6DB /* DescriptionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewCell.swift; sourceTree = "<group>"; };
+		0FF7D30F261F1D2700DE6A02 /* NameViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewCell.swift; sourceTree = "<group>"; };
 		0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0FFBFFE82630707A006BF96D /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		0FFBFFF62636C7F0006BF96D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -275,7 +279,9 @@
 			children = (
 				0F3C2DD8262EE523000271DD /* Cells */,
 				0F8BD7BD2611D83900122DC7 /* ReportViewController.swift */,
-				0FF7D30F261F1D2700DE6A02 /* ReportTableViewCell.swift */,
+				0FF7D30F261F1D2700DE6A02 /* NameViewCell.swift */,
+				0FF1704026497B9900E1F6DB /* RegionViewCell.swift */,
+				0FF1704526497BBD00E1F6DB /* DescriptionViewCell.swift */,
 				0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */,
 				0FB2B8962619FD9D00EB6DBE /* ReportCategoriesViewController.swift */,
 				0FFC26692623511A0015249E /* CategoriesCell.swift */,
@@ -612,11 +618,13 @@
 				0F8BD7802611CC0500122DC7 /* AppDelegate.swift in Sources */,
 				0F8BD7B92611D7CD00122DC7 /* ProfileViewController.swift in Sources */,
 				0F3C2DFF262EF3B9000271DD /* FileReportCell.swift in Sources */,
+				0FF1704626497BBD00E1F6DB /* DescriptionViewCell.swift in Sources */,
 				0FF7D318261FBE7900DE6A02 /* ProfileTableViewCell.swift in Sources */,
 				0FB2B8972619FD9D00EB6DBE /* ReportCategoriesViewController.swift in Sources */,
 				0FFC266A2623511A0015249E /* CategoriesCell.swift in Sources */,
 				0F8BD7BE2611D83900122DC7 /* ReportViewController.swift in Sources */,
-				0FF7D310261F1D2700DE6A02 /* ReportTableViewCell.swift in Sources */,
+				0FF7D310261F1D2700DE6A02 /* NameViewCell.swift in Sources */,
+				0FF1704126497B9900E1F6DB /* RegionViewCell.swift in Sources */,
 				0F3C2DD4262D99CC000271DD /* LoginTableViewCell.swift in Sources */,
 				0F3C2DCF262D9983000271DD /* LoginViewController.swift in Sources */,
 				0F8BD7822611CC0500122DC7 /* SceneDelegate.swift in Sources */,
