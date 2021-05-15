@@ -12,7 +12,8 @@ class SaveReportCell: UITableViewCell {
     
     @IBAction func saveAction(_ sender: Any) {
         let amplifyClient = AmplifyClient()
-        amplifyClient.saveReport(report: Report(id: "aazaa", name: "aaa", region: "zzzz", description: "bbb"))
+        amplifyClient.saveReport(report: Report(id: "aajhiuzaa", name: "aabnhn a", region: "zzzjnmjbz", description: "bbbhjbb"))
+        amplifyClient.createSubscription()
     }
 }
 

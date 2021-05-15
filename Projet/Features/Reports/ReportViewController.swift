@@ -17,7 +17,7 @@ enum ReportCell {
 class ReportViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
-    
+    let dataBase = AmplifyClient()
     var id: String?
     var name: String?
     var region: String?
@@ -37,16 +37,17 @@ class ReportViewController: UIViewController{
         tableView.register(UINib(nibName: "SaveReportCell", bundle: nil), forCellReuseIdentifier: "SaveReportCell")
         tableView.register(UINib(nibName: "StreetReportCell", bundle: nil), forCellReuseIdentifier: "StreetReportCell")
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
+//        let sceneDelegate = UIApplication.shared.delegate as! SceneDelegate
+        
     }
     
     func newReport() {
-        let report = Report(id : UUID().uuidString,
+        guard let report = dataBase.getReports() else {return}
+         let data = Report(id : UUID().uuidString,
                             name: self.name!,
                         region: self.region,
                         description: self.desc!)
-        let data = Report(from: report)
-        AmplifyClient.shared.saveReport(data: data)
-                        
+        dataBase.shared.saveReport(report: Report)
     }
 
     private func openCamera() {

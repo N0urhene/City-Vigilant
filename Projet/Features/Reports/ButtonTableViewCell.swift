@@ -1,9 +1,3 @@
-//
-//  ButtonTableViewCell.swift
-//  Projet
-//
-//  Created by nourhene on 16/04/2021.
-//
 
 import UIKit
 
