@@ -1,7 +1,7 @@
 
 import UIKit
 
-class DescriptionViewCell: UITableViewCell {
+class DescriptionViewCell: UITableViewCell, UITextFieldDelegate {
 
     var getName : (String?) -> () = { _ in }
     
@@ -9,7 +9,7 @@ class DescriptionViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        textField.delegate = self
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

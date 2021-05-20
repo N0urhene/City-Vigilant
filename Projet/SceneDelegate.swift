@@ -6,7 +6,7 @@ import AmplifyPlugins
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var apiPlugin: AWSAPIPlugin?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
     }
-
+    
     private func configureAmplify() {
         Amplify.Logging.logLevel = .info
         let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())

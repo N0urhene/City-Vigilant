@@ -63,9 +63,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "createSubscription()"
-            landmarkType = "7">
+            endingLineNumber = "42">
             <Locations>
                <Location
                   uuid = "0B6EB1E4-C40B-4271-B074-202E2214D89A - b893d86e487a84e5"
@@ -111,9 +109,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "createSubscription()"
-            landmarkType = "7">
+            endingLineNumber = "48">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

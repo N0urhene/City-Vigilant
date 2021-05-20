@@ -17,7 +17,6 @@ enum ReportCell {
 class ReportViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
-    let dataBase = AmplifyClient()
     var id: String?
     var name: String?
     var region: String?
@@ -28,7 +27,8 @@ class ReportViewController: UIViewController{
                                       .streetCell,
                                       .descriptionCell("Description"),
                                       .fileCell, .saveCell]
-    
+    var apiPlugin: AWSAPIPlugin?
+    var data: Report?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -37,17 +37,16 @@ class ReportViewController: UIViewController{
         tableView.register(UINib(nibName: "SaveReportCell", bundle: nil), forCellReuseIdentifier: "SaveReportCell")
         tableView.register(UINib(nibName: "StreetReportCell", bundle: nil), forCellReuseIdentifier: "StreetReportCell")
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
-//        let sceneDelegate = UIApplication.shared.delegate as! SceneDelegate
-        
+    
     }
     
     func newReport() {
-        guard let report = dataBase.getReports() else {return}
-         let data = Report(id : UUID().uuidString,
+         let reportData = Report(id : UUID().uuidString,
                             name: self.name!,
                         region: self.region,
                         description: self.desc!)
-        dataBase.shared.saveReport(report: Report)
+        let amplifyClient = AmplifyClient()
+        amplifyClient.saveReport(report: reportData)
     }
 
     private func openCamera() {
@@ -150,6 +149,7 @@ extension ReportViewController: UITableViewDataSource {
             return cell
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell
+            cell.save = newReport // save wallet ta3ml newReport
             return cell
         default:
             return UITableViewCell()

@@ -4,6 +4,7 @@ import UIKit
 class SaveReportCell: UITableViewCell {
     
     @IBOutlet weak var saveButton: UIButton!
+    var save = {}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -11,9 +12,7 @@ class SaveReportCell: UITableViewCell {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        let amplifyClient = AmplifyClient()
-        amplifyClient.saveReport(report: Report(id: "aajhiuzaa", name: "aabnhn a", region: "zzzjnmjbz", description: "bbbhjbb"))
-        amplifyClient.createSubscription()
+       save()
     }
 }
 

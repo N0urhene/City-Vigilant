@@ -18,6 +18,7 @@
 		0F3C2DFF262EF3B9000271DD /* FileReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C2DFD262EF3B9000271DD /* FileReportCell.swift */; };
 		0F3C2E00262EF3B9000271DD /* FileReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3C2DFE262EF3B9000271DD /* FileReportCell.xib */; };
 		0F3C2E08262F11F9000271DD /* UserNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3C2E07262F11F9000271DD /* UserNameCell.swift */; };
+		0F4BB49F2654418400E28C6E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4BB49E2654418400E28C6E /* InformationViewController.swift */; };
 		0F84C0FB26244C9C004C5FDE /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C0FA26244C9C004C5FDE /* Categories.swift */; };
 		0F84C1002629BED4004C5FDE /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */; };
 		0F84C1092629C593004C5FDE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1082629C593004C5FDE /* RegisterViewController.swift */; };
@@ -85,6 +86,7 @@
 		0F3C2DFD262EF3B9000271DD /* FileReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReportCell.swift; sourceTree = "<group>"; };
 		0F3C2DFE262EF3B9000271DD /* FileReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileReportCell.xib; sourceTree = "<group>"; };
 		0F3C2E07262F11F9000271DD /* UserNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCell.swift; sourceTree = "<group>"; };
+		0F4BB49E2654418400E28C6E /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		0F84C0FA26244C9C004C5FDE /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		0F84C1082629C593004C5FDE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				0FF7D317261FBE7900DE6A02 /* ProfileTableViewCell.swift */,
 				0F3C2E07262F11F9000271DD /* UserNameCell.swift */,
 				0FFBFFE82630707A006BF96D /* AccountCell.swift */,
+				0F4BB49E2654418400E28C6E /* InformationViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				0FFC266A2623511A0015249E /* CategoriesCell.swift in Sources */,
 				0F8BD7BE2611D83900122DC7 /* ReportViewController.swift in Sources */,
 				0FF7D310261F1D2700DE6A02 /* NameViewCell.swift in Sources */,
+				0F4BB49F2654418400E28C6E /* InformationViewController.swift in Sources */,
 				0FF1704126497B9900E1F6DB /* RegionViewCell.swift in Sources */,
 				0F3C2DD4262D99CC000271DD /* LoginTableViewCell.swift in Sources */,
 				0F3C2DCF262D9983000271DD /* LoginViewController.swift in Sources */,
