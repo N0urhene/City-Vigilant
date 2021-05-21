@@ -38,17 +38,22 @@ class ReportViewController: UIViewController{
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
     
     }
-    
+  
     func newReport()  {
-         let reportData = Report(id : UUID().uuidString,
-                                 name: self.name,
-                        region: self.region,
-                        description: self.desc)
-        guard  name?.isEmpty == true || region?.isEmpty == true || desc?.isEmpty == true
-        else {
-          return print("Please fill in all fields")
+        
+        guard  name?.isEmpty == false,
+             region?.isEmpty == false,
+            desc?.isEmpty == false
+        else  {
+           print("Please fill in all fields")
+            return
         }
+        let reportData = Report(
+                                name: self.name,
+                       region: self.region,
+                       description: self.desc)
         amplifyClient.saveReport(report: reportData)
+        
     }
 
     private func openCamera() {
