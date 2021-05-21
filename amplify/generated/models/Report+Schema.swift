@@ -21,9 +21,9 @@ extension Report {
     
     model.fields(
       .id(),
-      .field(report.name, is: .required, ofType: .string),
+      .field(report.name, is: .optional, ofType: .string),
       .field(report.region, is: .optional, ofType: .string),
-      .field(report.description, is: .required, ofType: .string)
+      .field(report.description, is: .optional, ofType: .string)
     )
     }
 }

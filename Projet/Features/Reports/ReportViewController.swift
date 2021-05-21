@@ -27,8 +27,7 @@ class ReportViewController: UIViewController{
                                       .streetCell,
                                       .descriptionCell("Description"),
                                       .fileCell, .saveCell]
-    var apiPlugin: AWSAPIPlugin?
-    var data: Report?
+    let amplifyClient = AmplifyClient()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -40,12 +39,15 @@ class ReportViewController: UIViewController{
     
     }
     
-    func newReport() {
+    func newReport()  {
          let reportData = Report(id : UUID().uuidString,
-                            name: self.name!,
+                                 name: self.name,
                         region: self.region,
-                        description: self.desc!)
-        let amplifyClient = AmplifyClient()
+                        description: self.desc)
+        guard  name?.isEmpty == true || region?.isEmpty == true || desc?.isEmpty == true
+        else {
+          return print("Please fill in all fields")
+        }
         amplifyClient.saveReport(report: reportData)
     }
 
@@ -136,7 +138,7 @@ extension ReportViewController: UITableViewDataSource {
         case .descriptionCell(let value):
             let cell = tableView.dequeueReusableCell(withIdentifier: "descViewCell", for: indexPath) as! DescriptionViewCell
             cell.nameLabel?.text = value
-            cell.textField?.placeholder = value
+            cell.descTtextField?.placeholder = value
             cell.getName = { (value : String?) in
                 self.desc = value!
             }
