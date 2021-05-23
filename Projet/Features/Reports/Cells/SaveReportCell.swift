@@ -1,6 +1,6 @@
 
 import UIKit
-
+import SCLAlertView
 class SaveReportCell: UITableViewCell {
     
     @IBOutlet weak var saveButton: UIButton!
@@ -13,6 +13,7 @@ class SaveReportCell: UITableViewCell {
     
     @IBAction func saveAction(_ sender: Any) {
         save()
+        SCLAlertView().showSuccess("Success", subTitle: "Your report had been successfully created")
     }
 }
 

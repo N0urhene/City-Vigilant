@@ -34,6 +34,7 @@ PODS:
   - AWSPluginsCore (1.9.0):
     - Amplify (= 1.9.0)
     - AWSCore (~> 2.24.0)
+  - SCLAlertView (0.8)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSAPIPlugin
   - AmplifyPlugins/AWSCognitoAuthPlugin
   - AmplifyPlugins/AWSDataStorePlugin
+  - SCLAlertView
 
 SPEC REPOS:
   trunk:
@@ -56,6 +58,7 @@ SPEC REPOS:
     - AWSCore
     - AWSMobileClient
     - AWSPluginsCore
+    - SCLAlertView
     - SQLite.swift
     - Starscream
 
@@ -69,9 +72,10 @@ SPEC CHECKSUMS:
   AWSCore: d5cd1311b33a4ae9faacda839c0ac9fff711cd79
   AWSMobileClient: 0cd4603f1dff10edb1e7b32e07753c864a21c5ed
   AWSPluginsCore: 34b987a116d75fb09852e2812cb53902d72c73c8
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 710efd5fcb02fe8ff55e43b5d3b6a43887a9fd61
+PODFILE CHECKSUM: fcf71c76469aabf8735965ec5964e56c54bb40f8
 
 COCOAPODS: 1.9.3

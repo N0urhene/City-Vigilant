@@ -9,7 +9,7 @@ target 'Projet' do
   pod 'AmplifyPlugins/AWSAPIPlugin'
   pod 'AmplifyPlugins/AWSDataStorePlugin'
   pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
-
+  pod 'SCLAlertView'
 
   # Pods for Projet
 
