@@ -12,7 +12,7 @@ class SaveReportCell: UITableViewCell {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-       save()
+        save()
     }
 }
 

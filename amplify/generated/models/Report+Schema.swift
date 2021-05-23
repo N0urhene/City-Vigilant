@@ -9,6 +9,7 @@ extension Report {
     case name
     case region
     case description
+    case categorie
   }
   
   public static let keys = CodingKeys.self
@@ -23,7 +24,8 @@ extension Report {
       .id(),
       .field(report.name, is: .optional, ofType: .string),
       .field(report.region, is: .optional, ofType: .string),
-      .field(report.description, is: .optional, ofType: .string)
+      .field(report.description, is: .optional, ofType: .string),
+      .field(report.categorie, is: .optional, ofType: .string)
     )
     }
 }

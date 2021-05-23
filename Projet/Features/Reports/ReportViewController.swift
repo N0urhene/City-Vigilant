@@ -21,12 +21,14 @@ class ReportViewController: UIViewController{
     var name: String?
     var region: String?
     var desc: String?
+    
     var locationManager: CLLocationManager = CLLocationManager()
     var reportArray : [ReportCell] = [.nameCell("Name"),
                                       .locationCell("Location/Region"),
                                       .streetCell,
                                       .descriptionCell("Description"),
                                       .fileCell, .saveCell]
+    var categorie: String?
     let amplifyClient = AmplifyClient()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +50,11 @@ class ReportViewController: UIViewController{
            print("Please fill in all fields")
             return
         }
-        let reportData = Report(
-                                name: self.name,
-                       region: self.region,
-                       description: self.desc)
+        let reportData = Report(name: self.name,
+                                region: self.region,
+                                description: self.desc,
+                                categorie: self.categorie)
         amplifyClient.saveReport(report: reportData)
-        
     }
 
     private func openCamera() {
@@ -133,7 +134,7 @@ extension ReportViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "regionViewCell", for: indexPath) as! RegionViewCell
             cell.nameLabel?.text = value
             cell.textField?.placeholder = value
-            cell.getName = { (value : String?) in
+            cell.getRegion = { (value : String?) in
                 self.region = value!
             }
             return cell
@@ -144,7 +145,7 @@ extension ReportViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "descViewCell", for: indexPath) as! DescriptionViewCell
             cell.nameLabel?.text = value
             cell.descTtextField?.placeholder = value
-            cell.getName = { (value : String?) in
+            cell.getDescription = { (value : String?) in
                 self.desc = value!
             }
             return cell

@@ -7,14 +7,17 @@ public struct Report: Model {
   public var name: String?
   public var region: String?
   public var description: String?
+  public var categorie: String?
   
   public init(id: String = UUID().uuidString,
       name: String? = nil,
       region: String? = nil,
-      description: String? = nil) {
+      description: String? = nil,
+      categorie: String? = nil) {
       self.id = id
       self.name = name
       self.region = region
       self.description = description
+      self.categorie = categorie
   }
 }

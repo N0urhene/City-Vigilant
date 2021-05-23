@@ -16,5 +16,6 @@ type Report
   name: String
   region: String
   description: String
+  categorie: String
 }
 
