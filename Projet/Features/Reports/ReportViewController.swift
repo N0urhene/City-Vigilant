@@ -4,6 +4,7 @@ import CoreLocation
 import AmplifyPlugins
 import MobileCoreServices
 import Photos
+import SCLAlertView
 
 enum ReportCell {
     case nameCell(String)
@@ -21,14 +22,14 @@ class ReportViewController: UIViewController{
     var name: String?
     var region: String?
     var desc: String?
-    
+    var categorie: String?
     var locationManager: CLLocationManager = CLLocationManager()
     var reportArray : [ReportCell] = [.nameCell("Name"),
                                       .locationCell("Location/Region"),
                                       .streetCell,
                                       .descriptionCell("Description"),
                                       .fileCell, .saveCell]
-    var categorie: String?
+    
     let amplifyClient = AmplifyClient()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,7 @@ class ReportViewController: UIViewController{
              region?.isEmpty == false,
             desc?.isEmpty == false
         else  {
+            SCLAlertView().showWarning("Warn", subTitle: "Please fill in all fields")
            print("Please fill in all fields")
             return
         }
@@ -55,6 +57,8 @@ class ReportViewController: UIViewController{
                                 description: self.desc,
                                 categorie: self.categorie)
         amplifyClient.saveReport(report: reportData)
+        SCLAlertView().showSuccess("Success", subTitle: "Your report had been successfully created")
+        
     }
 
     private func openCamera() {

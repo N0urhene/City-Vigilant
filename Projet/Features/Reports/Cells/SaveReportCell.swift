@@ -13,7 +13,7 @@ class SaveReportCell: UITableViewCell {
     
     @IBAction func saveAction(_ sender: Any) {
         save()
-        SCLAlertView().showSuccess("Success", subTitle: "Your report had been successfully created")
+        
     }
 }
 
