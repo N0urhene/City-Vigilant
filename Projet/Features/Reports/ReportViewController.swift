@@ -49,7 +49,6 @@ class ReportViewController: UIViewController{
             desc?.isEmpty == false
         else  {
             SCLAlertView().showWarning("Warn", subTitle: "Please fill in all fields")
-           print("Please fill in all fields")
             return
         }
         let reportData = Report(name: self.name,
