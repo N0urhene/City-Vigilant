@@ -22,6 +22,7 @@
 		0F4BB4CA265F7A4E00E28C6E /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4BB4C9265F7A4E00E28C6E /* PictureCell.swift */; };
 		0F4BB4D9265F87D400E28C6E /* NewsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4BB4D8265F87D400E28C6E /* NewsCollectionCell.swift */; };
 		0F4BB4E1265F8A3300E28C6E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4BB4E0265F8A3300E28C6E /* NewsCell.swift */; };
+		0F4BB4E626600D1A00E28C6E /* ReportsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4BB4E526600D1A00E28C6E /* ReportsCell.swift */; };
 		0F84C0FB26244C9C004C5FDE /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C0FA26244C9C004C5FDE /* Categories.swift */; };
 		0F84C1002629BED4004C5FDE /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */; };
 		0F84C1092629C593004C5FDE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1082629C593004C5FDE /* RegisterViewController.swift */; };
@@ -93,6 +94,7 @@
 		0F4BB4C9265F7A4E00E28C6E /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		0F4BB4D8265F87D400E28C6E /* NewsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionCell.swift; sourceTree = "<group>"; };
 		0F4BB4E0265F8A3300E28C6E /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		0F4BB4E526600D1A00E28C6E /* ReportsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsCell.swift; sourceTree = "<group>"; };
 		0F84C0FA26244C9C004C5FDE /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		0F84C0FF2629BED4004C5FDE /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		0F84C1082629C593004C5FDE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				0F4BB4C9265F7A4E00E28C6E /* PictureCell.swift */,
 				0F4BB4D8265F87D400E28C6E /* NewsCollectionCell.swift */,
 				0F4BB4E0265F8A3300E28C6E /* NewsCell.swift */,
+				0F4BB4E526600D1A00E28C6E /* ReportsCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				0FF1704126497B9900E1F6DB /* RegionViewCell.swift in Sources */,
 				0F3C2DD4262D99CC000271DD /* LoginTableViewCell.swift in Sources */,
 				0F3C2DCF262D9983000271DD /* LoginViewController.swift in Sources */,
+				0F4BB4E626600D1A00E28C6E /* ReportsCell.swift in Sources */,
 				0F8BD7822611CC0500122DC7 /* SceneDelegate.swift in Sources */,
 				0F8BD7C32611D84A00122DC7 /* PostsViewController.swift in Sources */,
 				0F023D3F2620465D00C40AC6 /* Profile.swift in Sources */,
