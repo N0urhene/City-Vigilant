@@ -17,6 +17,7 @@ class NewsCell: UITableViewCell {
     }
 }
 
+//MARK: UICollectionViewDataSource
 extension NewsCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newsArray.count
@@ -36,6 +37,7 @@ extension NewsCell: UICollectionViewDataSource {
   }
 }
 
+//MARK: UICollectionViewDelegateFlowLayout
 extension NewsCell: UICollectionViewDelegateFlowLayout {
 
 }

@@ -3,7 +3,6 @@ import UIKit
 import Amplify
 import AmplifyPlugins
 
-var subscription: GraphQLSubscriptionOperation<Report>?
 
 class AmplifyClient {
     func getReports() {
@@ -37,4 +36,23 @@ class AmplifyClient {
             }
         }
     }
+    
+    func listReports() {
+        let report = Report.keys
+        let predicate = report.name == "my first report" && report.description == "report description"
+        Amplify.API.query(request: .paginatedList(Report.self, where: predicate, limit: 1000)) { event in
+            switch event {
+            case .success(let result):
+                switch result {
+                case .success(let reports):
+                    print("Successfully retrieved list of todos: \(reports)")
+                case .failure(let error):
+                    print("Got failed result with \(error.errorDescription)")
+                }
+            case .failure(let error):
+                print("Got failed event with error \(error)")
+            }
+        }
+    }
+    
 }

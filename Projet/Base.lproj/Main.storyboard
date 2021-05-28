@@ -42,7 +42,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="homeImage" destination="2pc-Xa-FGU" id="ZjA-IG-Kpy"/>
+                                            <outlet property="homepic" destination="2pc-Xa-FGU" id="ZjA-IG-Kpy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="275" id="vO3-YY-FrF" customClass="NewsCell" customModule="Projet" customModuleProvider="target">
@@ -111,11 +111,11 @@
                                             <outlet property="collectionView" destination="0q6-S2-ZjK" id="Nrd-eX-3jH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReportsCell" rowHeight="90" id="1zJ-xM-Eqb" customClass="ReportsCell" customModule="Projet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1033" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReportsCell" rowHeight="140" id="1zJ-xM-Eqb" customClass="ReportsCell" customModule="Projet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1033" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1zJ-xM-Eqb" id="b5v-up-b37">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
