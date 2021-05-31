@@ -7,13 +7,18 @@ enum NewsItem {
 class NewsCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var newsArray: [NewsItem] = [.NewsCollectionCell(UIImage(named: "nature")!, " Tree Feast" ), .NewsCollectionCell(UIImage(named:"trash.png")!, " Clean-up campaign"), .NewsCollectionCell(UIImage(named:"bike.png")!, "Cycling")]
+    
+    var newsArray: [NewsItem] = [.NewsCollectionCell(UIImage(named: "nature")!, " Tree Feast" ), .NewsCollectionCell(UIImage(named:"trash")!, " Clean-up campaign"), .NewsCollectionCell(UIImage(named:"bike")!, "Cycling")]
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        self.collectionView?.collectionViewLayout = layout
+        layout.scrollDirection = .horizontal
+       
     }
 }
 
@@ -35,9 +40,13 @@ extension NewsCell: UICollectionViewDataSource {
             return cell
     }
   }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 170, height: 170)
+    }
 }
 
 //MARK: UICollectionViewDelegateFlowLayout
 extension NewsCell: UICollectionViewDelegateFlowLayout {
 
+    
 }

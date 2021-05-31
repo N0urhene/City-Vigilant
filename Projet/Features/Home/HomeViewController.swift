@@ -2,24 +2,20 @@
 import UIKit
 
 enum HomeCell {
-    case PictureCell(String)
+    case PictureCell
     case NewsCell
-    case ReportsCell
 }
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var homeArray: [HomeCell] = [.PictureCell("homepic"),
-                                 .NewsCell,
-                                 .ReportsCell]
+    let homeArray: [HomeCell] = [.PictureCell, .NewsCell]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.reloadData()
-        
+        tableView.register(UINib(nibName: "PictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
     }
 }
 
@@ -33,22 +29,26 @@ extension HomeViewController: UITableViewDataSource {
         let caseType = homeArray[indexPath.row]
         switch caseType {
         case .PictureCell:
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as! PictureCell
-        cell.homepic?.image
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as! PictureCell
+            cell.homeImage?.image = UIImage(named: "home")
+            return cell
         case .NewsCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
-            cell.collectionView.tag = indexPath.row
-            return cell
-
-        case .ReportsCell:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReportsCell", for: indexPath) as! ReportsCell
+            cell.collectionView.tag = indexPath.section
             
             return cell
         }
     }
 }
+
 //MARK: UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch homeArray[indexPath.section] {
+        case .NewsCell:
+            return 200.0
+        case .PictureCell:
+            return 750.0
+        }
+    }
 }

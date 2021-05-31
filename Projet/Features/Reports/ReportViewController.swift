@@ -23,6 +23,7 @@ class ReportViewController: UIViewController{
     var region: String?
     var desc: String?
     var categorie: String?
+    var image: String!
     var locationManager: CLLocationManager = CLLocationManager()
     var reportArray : [ReportCell] = [.nameCell("Name"),
                                       .locationCell("Location/Region"),
@@ -54,8 +55,10 @@ class ReportViewController: UIViewController{
         let reportData = Report(name: self.name,
                                 region: self.region,
                                 description: self.desc,
+                                image: self.image,
                                 categorie: self.categorie)
         amplifyClient.saveReport(report: reportData)
+        amplifyClient.downloadImages(reports: reportData)
         SCLAlertView().showSuccess("Success", subTitle: "Your report had been successfully created")
         
     }
@@ -80,13 +83,13 @@ class ReportViewController: UIViewController{
     }
     
     private func importImage() {
+        let reportData = Report(image: self.image)
         let picker = UIImagePickerController()
-        
         picker.allowsEditing = true
         picker.delegate = self
-        
         picker.sourceType = .photoLibrary
         self.present(picker, animated: true) {() -> Void in }
+        amplifyClient.downloadImages(reports: reportData)
     }
     
     func checkLibrary() {
@@ -108,8 +111,7 @@ class ReportViewController: UIViewController{
         let importMenu = UIDocumentPickerViewController(documentTypes: types as [String], in: .import )
         importMenu.delegate = self
         importMenu.modalPresentationStyle = .formSheet
-        present(importMenu, animated: true)
-        
+        self.present(importMenu, animated: true)
     }
 }
 
@@ -180,7 +182,6 @@ extension ReportViewController: UINavigationControllerDelegate, UIImagePickerCon
     
     func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
-        
         guard let image = info[.editedImage] as? UIImage else {
             print("No image found")
             return
@@ -197,9 +198,9 @@ extension ReportViewController: UIDocumentPickerDelegate{
         let sandboxFileURL = dir.appendingPathComponent(selectedFileURL.lastPathComponent)
         
                print(sandboxFileURL.lastPathComponent)
-//                    DispatchQueue.main.async {
-//                        self.attachDocument().append(dir.lastPathComponent)
-//                    }
+                    DispatchQueue.main.async {
+                        self.attachDocument()
+                    }
     }
 }
 

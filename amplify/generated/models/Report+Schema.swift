@@ -9,7 +9,12 @@ extension Report {
     case name
     case region
     case description
+    case image
     case categorie
+    case time
+    case nbrOfLikes
+    case nbrOfComments
+    case nbrOfShares
   }
   
   public static let keys = CodingKeys.self
@@ -25,7 +30,12 @@ extension Report {
       .field(report.name, is: .optional, ofType: .string),
       .field(report.region, is: .optional, ofType: .string),
       .field(report.description, is: .optional, ofType: .string),
-      .field(report.categorie, is: .optional, ofType: .string)
+      .field(report.image, is: .optional, ofType: .string),
+      .field(report.categorie, is: .optional, ofType: .string),
+      .field(report.time, is: .optional, ofType: .string),
+      .field(report.nbrOfLikes, is: .optional, ofType: .int),
+      .field(report.nbrOfComments, is: .optional, ofType: .int),
+      .field(report.nbrOfShares, is: .optional, ofType: .int)
     )
     }
 }
