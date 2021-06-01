@@ -32,6 +32,7 @@ class ReportViewController: UIViewController{
                                       .fileCell, .saveCell]
     
     let amplifyClient = AmplifyClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -58,7 +59,7 @@ class ReportViewController: UIViewController{
                                 image: self.image,
                                 categorie: self.categorie)
         amplifyClient.saveReport(report: reportData)
-        amplifyClient.downloadImages(reports: reportData)
+//        amplifyClient.downloadImages(reports: reportData)
         SCLAlertView().showSuccess("Success", subTitle: "Your report had been successfully created")
         
     }
@@ -89,7 +90,8 @@ class ReportViewController: UIViewController{
         picker.delegate = self
         picker.sourceType = .photoLibrary
         self.present(picker, animated: true) {() -> Void in }
-        amplifyClient.downloadImages(reports: reportData)
+        amplifyClient.uploadImage()
+//        amplifyClient.downloadImages(reports: reportData)
     }
     
     func checkLibrary() {

@@ -1,9 +1,3 @@
-//
-//  FileReportCellCell.swift
-//  Projet
-//
-//  Created by nourhene on 20/04/2021.
-//
 
 import UIKit
 

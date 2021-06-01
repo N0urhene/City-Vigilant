@@ -45,6 +45,7 @@ class ReportCategoriesViewController: UIViewController, UICollectionViewDataSour
             cell.label?.text = value
             cell.getCategorie = {(value: String?) in
             self.categorie = value
+            cell.layer.borderColor = UIColor.blue.cgColor
             }
             return cell
             

@@ -7,17 +7,20 @@ class PostsCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var statusLabel: UILabel!
     
+    var report: Report!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        update()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func update() {
+        userLabel.text = report.name
+        timeLabel.text = report.time
+        captionLabel.text = report.description
+//        postImage.image = report.image
+        statusLabel.text = "\(report.nbrOfLikes) likes                     \(report.nbrOfComments) comments           \(report.nbrOfShares) shares "
     }
-
 }
