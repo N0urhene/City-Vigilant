@@ -33,7 +33,7 @@
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
-                            <action selector="ReportsButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BOP-wd-HWc"/>
+                            <action selector="showPostsListAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BOP-wd-HWc"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There’s no time to be bored in a world as beautiful as this" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSK-o0-XF1">
@@ -59,7 +59,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="homeImage" destination="tOJ-cM-Wrh" id="xZW-kG-2Xq"/>
+                <outlet property="homeImageView" destination="tOJ-cM-Wrh" id="xZW-kG-2Xq"/>
             </connections>
             <point key="canvasLocation" x="136.95652173913044" y="326.45089285714283"/>
         </tableViewCell>

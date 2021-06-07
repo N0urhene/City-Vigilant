@@ -5,6 +5,8 @@ import AmplifyPlugins
 import MobileCoreServices
 import Photos
 import SCLAlertView
+import  AWSCore
+import  AWSS3
 
 enum ReportCell {
     case nameCell(String)
@@ -24,6 +26,7 @@ class ReportViewController: UIViewController{
     var desc: String?
     var categorie: String?
     var image: String!
+    var nameLabel: String?
     var locationManager: CLLocationManager = CLLocationManager()
     var reportArray : [ReportCell] = [.nameCell("Name"),
                                       .locationCell("Location/Region"),
@@ -84,14 +87,13 @@ class ReportViewController: UIViewController{
     }
     
     private func importImage() {
-        let reportData = Report(image: self.image)
+       // let reportData = Report(image: self.image)
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
         picker.sourceType = .photoLibrary
         self.present(picker, animated: true) {() -> Void in }
         amplifyClient.uploadImage()
-//        amplifyClient.downloadImages(reports: reportData)
     }
     
     func checkLibrary() {
@@ -161,6 +163,7 @@ extension ReportViewController: UITableViewDataSource {
             // cell.val = openCamera
             cell.pic = importImage
             cell.file = attachDocument
+//            cell.nameLabel.text = 
             return cell
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell
@@ -189,6 +192,12 @@ extension ReportViewController: UINavigationControllerDelegate, UIImagePickerCon
             return
         }
         print(image.size)
+        
+        guard let fileUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL else { return }
+       
+        print(fileUrl.lastPathComponent)
+//           print(fileUrl.pathExtension)     // get file extension
+           dismiss(animated: true, completion: nil)
     }
 }
 //MARK: Protocol UIDocumentPickerDelegate

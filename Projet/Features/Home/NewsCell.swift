@@ -6,6 +6,7 @@ enum NewsItem {
 }
 class NewsCell: UITableViewCell {
 
+    @IBOutlet weak var newsLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var newsArray: [NewsItem] = [.NewsCollectionCell(UIImage(named: "nature")!, " Tree Feast" ), .NewsCollectionCell(UIImage(named:"trash")!, " Clean-up campaign"), .NewsCollectionCell(UIImage(named:"bike")!, "Cycling")]

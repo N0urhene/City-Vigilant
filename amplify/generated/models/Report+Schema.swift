@@ -14,7 +14,6 @@ extension Report {
     case time
     case nbrOfLikes
     case nbrOfComments
-    case nbrOfShares
   }
   
   public static let keys = CodingKeys.self
@@ -34,8 +33,7 @@ extension Report {
       .field(report.categorie, is: .optional, ofType: .string),
       .field(report.time, is: .optional, ofType: .string),
       .field(report.nbrOfLikes, is: .optional, ofType: .int),
-      .field(report.nbrOfComments, is: .optional, ofType: .int),
-      .field(report.nbrOfShares, is: .optional, ofType: .int)
+      .field(report.nbrOfComments, is: .optional, ofType: .int)
     )
     }
 }

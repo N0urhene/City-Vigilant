@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FileReportCell" rowHeight="120" id="KGk-i7-Jjw" customClass="FileReportCell" customModule="Projet" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="402" height="120"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FileReportCell" rowHeight="127" id="KGk-i7-Jjw" customClass="FileReportCell" customModule="Projet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="127"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="402" height="120"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attach file" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-IZ-611">
@@ -25,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6v-Do-eyo">
-                        <rect key="frame" x="20" y="117" width="362" height="1"/>
+                        <rect key="frame" x="20" y="117" width="355" height="1"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="YDU-D3-fMD"/>
@@ -73,13 +74,23 @@
                             <action selector="fileAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="U1L-jR-ExK"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbg-49-sIt">
+                        <rect key="frame" x="229" y="61" width="154" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Xbg-49-sIt" firstAttribute="leading" secondItem="4uR-aN-wqK" secondAttribute="trailing" constant="52" id="3ok-g5-SWL"/>
                     <constraint firstItem="4uR-aN-wqK" firstAttribute="width" secondItem="64d-eI-WPD" secondAttribute="width" id="EHq-jc-I6C"/>
                     <constraint firstItem="N6v-Do-eyo" firstAttribute="top" secondItem="4uR-aN-wqK" secondAttribute="bottom" constant="22" id="HWf-LO-YvV"/>
                     <constraint firstItem="64d-eI-WPD" firstAttribute="leading" secondItem="TRH-f3-cIM" secondAttribute="trailing" constant="5" id="IJa-0r-nhO"/>
                     <constraint firstItem="N6v-Do-eyo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="J48-KJ-3MO"/>
                     <constraint firstItem="4uR-aN-wqK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="51" id="JyM-tB-llY"/>
+                    <constraint firstItem="Xbg-49-sIt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="61" id="M8L-am-hIl"/>
+                    <constraint firstItem="N6v-Do-eyo" firstAttribute="top" secondItem="Xbg-49-sIt" secondAttribute="bottom" constant="31" id="SlC-xq-dKx"/>
+                    <constraint firstAttribute="trailing" secondItem="Xbg-49-sIt" secondAttribute="trailing" constant="12" id="Y0I-cd-q1g"/>
                     <constraint firstItem="E5x-IZ-611" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Zhz-Ph-RRW"/>
                     <constraint firstItem="E5x-IZ-611" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bGf-2p-VoA"/>
                     <constraint firstItem="N6v-Do-eyo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eJX-Oc-zsU"/>
@@ -95,8 +106,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="fileLabel" destination="E5x-IZ-611" id="hLH-rE-ENo"/>
+                <outlet property="nameLabel" destination="Xbg-49-sIt" id="rIx-c2-nES"/>
             </connections>
-            <point key="canvasLocation" x="24.637681159420293" y="118.52678571428571"/>
+            <point key="canvasLocation" x="18.115942028985508" y="120.87053571428571"/>
         </tableViewCell>
     </objects>
     <resources>

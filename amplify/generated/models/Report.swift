@@ -12,7 +12,6 @@ public struct Report: Model {
   public var time: String?
   public var nbrOfLikes: Int?
   public var nbrOfComments: Int?
-  public var nbrOfShares: Int?
   
   public init(id: String = UUID().uuidString,
       name: String? = nil,
@@ -22,8 +21,7 @@ public struct Report: Model {
       categorie: String? = nil,
       time: String? = nil,
       nbrOfLikes: Int? = nil,
-      nbrOfComments: Int? = nil,
-      nbrOfShares: Int? = nil) {
+      nbrOfComments: Int? = nil) {
       self.id = id
       self.name = name
       self.region = region
@@ -33,6 +31,5 @@ public struct Report: Model {
       self.time = time
       self.nbrOfLikes = nbrOfLikes
       self.nbrOfComments = nbrOfComments
-      self.nbrOfShares = nbrOfShares
   }
 }

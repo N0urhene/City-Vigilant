@@ -7,14 +7,12 @@ class StreetReportCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
-    var localityTxtField: UITextField!
-    var aAreaTxtField: UITextField!
-    var countryTxtField: UITextField!
-    
+    var placemark: CLPlacemark?
     private var locationManager: CLLocationManager?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        displayLocationInfo()
     }
     
     @IBAction func add(_ sender: Any) {
@@ -24,17 +22,17 @@ class StreetReportCell: UITableViewCell {
         locationManager?.startUpdatingLocation()
     }
     
-    func displayLocationInfo(_ placemark: CLPlacemark?) {
+    func displayLocationInfo() {
         if let containsPlacemark = placemark {
             print("your location is:-",containsPlacemark)
             locationManager?.stopUpdatingLocation()
-            let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
-            let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
-            let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
-            
-            localityTxtField.text = locality
-            aAreaTxtField.text = administrativeArea
-            countryTxtField.text = country
+            let locality = containsPlacemark.locality
+            print(locality!)
+            let administrativeArea = containsPlacemark.administrativeArea
+            print(administrativeArea!)
+            let country = containsPlacemark.country
+            print(country!)
+           
         }
     }
 }
@@ -49,7 +47,12 @@ extension StreetReportCell: CLLocationManagerDelegate {
 }
 
 func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    print(locations)
+    if let location = locations.last {
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+        print(latitude)
+        print(longitude)
+        }
 }
 
 func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

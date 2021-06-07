@@ -17,6 +17,14 @@ class HomeViewController: UIViewController {
         self.tableView.delegate = self
         tableView.register(UINib(nibName: "PictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
     }
+    
+    func showPostsListAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let postVC = storyboard.instantiateViewController(identifier: "PostViewController") as! PostViewController
+            present(postVC, animated: true)
+        
+        }
+
 }
 
 //MARK: UITableViewDataSource
@@ -30,7 +38,8 @@ extension HomeViewController: UITableViewDataSource {
         switch caseType {
         case .PictureCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as! PictureCell
-            cell.homeImage?.image = UIImage(named: "home")
+            cell.homeImageView?.image = UIImage(named: "home")
+            cell.showPostsList = showPostsListAction
             return cell
         case .NewsCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell

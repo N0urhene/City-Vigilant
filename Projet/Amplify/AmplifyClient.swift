@@ -2,11 +2,13 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
+import AWSCore
+import AWSS3
+import Dispatch
 
-var imageCash = [String: UIImage?]()
-var image: UIImage?
 
 class AmplifyClient {
+    
     func getReports() {
         Amplify.API.query(request: .list(Report.self)) { event in
             switch event {
@@ -39,54 +41,75 @@ class AmplifyClient {
         }
     }
     
+    func fetchCurrentAuthSession() {
+        _ = Amplify.Auth.fetchAuthSession { result in
+            switch result {
+            case .success(let session):
+                print("Is user signed in - \(session.isSignedIn)")
+            case .failure(let error):
+                print("Fetch session failed with error \(error)")
+            }
+        }
+    }
+    
     func uploadImage() {
-        guard let imageData = image?.jpegData(compressionQuality: 0.5) else { return }
-        let key = UUID().uuidString + ".jpg"
-        _ = Amplify.Storage.uploadData(key: key, data: imageData) { Result in
-            
-            switch Result {
-            case.success:
-                print("Uploaded image")
-                let report = Report(image: key)
-                self.saveReport(report: report)
-            case.failure(let error):
-                print("Failed to upload \(error)")
-            }
-        }
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast2,
+            identityPoolId:"us-east-2:fc0c552a-d5d8-406b-a834-4a61bd2a6c53")
+        let configuration = AWSServiceConfiguration(region:.USEast2, credentialsProvider:credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        // let bucketName = "city-vigilantes92cc437b67c84698bd779d2527d88194dev-dev"
+        
+        let dataString = "Example file contents"
+        let data = dataString.data(using: .utf8)!
+        Amplify.Storage.uploadData(key: "ExampleKey", data: data, progressListener: { progress in
+                 print("Progress: \(progress)") },
+                resultListener: { (event) in
+                    switch event {
+                        case .success(let data):
+                            print("Completed: \(data)")
+                        case .failure(let storageError):
+                            print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+                                    }
+                                   })
     }
-        
-//        func downloadImages(reports: Report) {
-//            for report in [reports] {
-//                _ = Amplify.Storage.downloadData(key: report.image) { Result in
-//                    switch Result {
-//                    case .success(let imageData):
-//                        DispatchQueue.main.async {
-//                            let image = UIImage(data: imageData)
-//                            imageCash[report.image] = image
-//                        }
-//                    case .failure(let error):
-//                        print("Failed to download \(error)")
-//                    }
-//                }
-//            }
-//        }
-        
-        func listReports() {
-            let report = Report.keys
-            let predicate = report.name == "nourhene" && report.time == "2 hrs ago" && report.description == "report description" && report.image == ""
-            Amplify.API.query(request: .paginatedList(Report.self, where: predicate, limit: 1000)) { event in
-                switch event {
-                case .success(let result):
-                    switch result {
-                    case .success(let reports):
-                        print("Successfully retrieved list of todos: \(reports)")
-                    case .failure(let error):
-                        print("Got failed result with \(error.errorDescription)")
-                    }
+    
+    func listReports(setReports: @escaping (_ reports: [Report])-> ()) {
+        let report = Report.keys
+        DispatchQueue.global(qos: .background).async {
+            Amplify.API.query(request: .paginatedList(Report.self, limit: 1000)) { event in
+            switch event {
+            case .success(let result):
+                switch result {
+                case .success(let reports):
+                    print("Successfully retrieved list of reports: \(reports)")
+                    setReports(reports.elements).self
+                    let predicate = report.name == "nourhene"
+                        && report.time == " 3min"
+                        && report.description == "yahdikk e5dem 5ankamell ranii fadeet"
+                        && report.image == "nourhene ma3adch tetcheff"
+                    print(predicate)
+                    self.getReports()
                 case .failure(let error):
-                    print("Got failed event with error \(error)")
+                    print("Got failed result with \(error.errorDescription)")
                 }
+            case .failure(let error):
+                print("Got failed event with error \(error)")
             }
         }
-        
     }
+}
+    
+    func listFiles()  {
+        Amplify.Storage.list { event in
+            switch event {
+            case let .success(listResult):
+                print("Completed")
+                listResult.items.forEach { item in
+                    print("Key: \(item.key)")
+                }
+            case let .failure(storageError):
+                print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        }
+    }
+}

@@ -21,6 +21,6 @@ type Report
   time: String
   nbrOfLikes: Int
   nbrOfComments: Int
-  nbrOfShares: Int
+  
 }
 

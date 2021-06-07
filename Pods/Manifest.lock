@@ -52,6 +52,7 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSCognitoAuthPlugin
   - AmplifyPlugins/AWSDataStorePlugin
   - AmplifyPlugins/AWSS3StoragePlugin
+  - AWSS3
   - SCLAlertView
 
 SPEC REPOS:
@@ -85,6 +86,6 @@ SPEC CHECKSUMS:
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 98ac2d4dad096b7d57bb92e1928749e17fb6ac1e
+PODFILE CHECKSUM: 2d870564b3fdc3bc7432c6371ae9cb8dc58111e9
 
 COCOAPODS: 1.9.3

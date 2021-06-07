@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -94,15 +95,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-b0-gbU">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-b0-gbU">
                                                     <rect key="frame" x="35" y="91" width="344" height="92"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="2Hz-b0-gbU" firstAttribute="centerX" secondItem="VVB-01-CWC" secondAttribute="centerX" id="9Fc-cj-U1w"/>
                                                 <constraint firstItem="2Hz-b0-gbU" firstAttribute="top" secondItem="VVB-01-CWC" secondAttribute="topMargin" constant="80" id="PeU-An-Y9S"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="2Hz-b0-gbU" secondAttribute="bottom" constant="10" id="Pv5-le-eaH"/>
+                                                <constraint firstItem="2Hz-b0-gbU" firstAttribute="leading" secondItem="VVB-01-CWC" secondAttribute="leadingMargin" constant="15" id="aUV-p8-mo6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

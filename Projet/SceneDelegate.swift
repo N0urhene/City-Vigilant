@@ -2,6 +2,7 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
+import AWSS3
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -27,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             try Amplify.add(plugin: AWSS3StoragePlugin())
             try Amplify.add(plugin: apiPlugin)
             try Amplify.configure()
-            print("Initialized Amplify");
+            print("Amplify configured with storage plugin");
         } catch {
             print("Could not initialize Amplify: \(error)")
         }

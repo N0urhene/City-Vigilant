@@ -3,6 +3,7 @@ import UIKit
 
 class FileReportCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var fileLabel: UILabel!
     
     var val = {}
