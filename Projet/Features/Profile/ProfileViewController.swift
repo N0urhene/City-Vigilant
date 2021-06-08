@@ -50,4 +50,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         return UITableViewCell()
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath ) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "DonationViewController") as! DonationViewController
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

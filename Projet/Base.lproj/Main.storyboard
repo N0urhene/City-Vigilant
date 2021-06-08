@@ -11,6 +11,145 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Donation View Controller-->
+        <scene sceneID="SUO-su-FfR">
+            <objects>
+                <viewController storyboardIdentifier="DonationViewController" id="Zmu-UV-e11" customClass="DonationViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MOp-8b-0bz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set up  a payment          method" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-fb-Ng2">
+                                <rect key="frame" x="30" y="134" width="356" height="103"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80d-Gt-DtJ">
+                                <rect key="frame" x="20" y="310.5" width="58" height="33"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageReference key="image" image="creditcard" catalog="system" symbolScale="small" renderingMode="original"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-gc-8hr">
+                                <rect key="frame" x="12" y="391" width="390" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="b68-EH-k4g"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PayPal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-IY-Trw">
+                                <rect key="frame" x="96" y="439" width="108" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="Mxy-C6-lSF"/>
+                                    <constraint firstAttribute="height" constant="42" id="QCa-jj-X4c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pp" translatesAutoresizingMaskIntoConstraints="NO" id="fNR-GM-g0v">
+                                <rect key="frame" x="20" y="439" width="58" height="42"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit card or debit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-BN-Hms">
+                                <rect key="frame" x="96" y="314" width="230" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rN5-at-kBc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IgI-IY-Trw" firstAttribute="leading" secondItem="fNR-GM-g0v" secondAttribute="trailing" constant="18" id="7ZN-lw-Mcl"/>
+                            <constraint firstItem="80d-Gt-DtJ" firstAttribute="trailing" secondItem="fNR-GM-g0v" secondAttribute="trailing" id="9WG-Zw-KcE"/>
+                            <constraint firstItem="80d-Gt-DtJ" firstAttribute="leading" secondItem="MOp-8b-0bz" secondAttribute="leadingMargin" id="Aad-wS-q0F"/>
+                            <constraint firstItem="rN5-at-kBc" firstAttribute="trailing" secondItem="IgI-IY-Trw" secondAttribute="trailing" constant="210" id="E0a-K3-zYD"/>
+                            <constraint firstItem="V7O-gc-8hr" firstAttribute="top" secondItem="SdC-BN-Hms" secondAttribute="bottom" constant="50.5" id="F6q-Ne-RFC"/>
+                            <constraint firstItem="IgI-IY-Trw" firstAttribute="top" secondItem="fNR-GM-g0v" secondAttribute="top" id="Se9-Ar-UN7"/>
+                            <constraint firstItem="rN5-at-kBc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jm0-fb-Ng2" secondAttribute="trailing" symbolic="YES" id="Tg1-sS-QT0"/>
+                            <constraint firstItem="jm0-fb-Ng2" firstAttribute="top" secondItem="rN5-at-kBc" secondAttribute="top" constant="90" id="XMm-Lq-2hE"/>
+                            <constraint firstItem="V7O-gc-8hr" firstAttribute="top" secondItem="80d-Gt-DtJ" secondAttribute="bottom" constant="44" id="bM7-JQ-CzI"/>
+                            <constraint firstItem="80d-Gt-DtJ" firstAttribute="centerY" secondItem="SdC-BN-Hms" secondAttribute="centerY" id="bua-JH-b51"/>
+                            <constraint firstItem="IgI-IY-Trw" firstAttribute="top" secondItem="V7O-gc-8hr" secondAttribute="bottom" constant="47" id="e2S-92-N2d"/>
+                            <constraint firstItem="IgI-IY-Trw" firstAttribute="bottom" secondItem="fNR-GM-g0v" secondAttribute="bottom" id="g1a-9J-phn"/>
+                            <constraint firstItem="80d-Gt-DtJ" firstAttribute="leading" secondItem="fNR-GM-g0v" secondAttribute="leading" id="gUz-KE-1df"/>
+                            <constraint firstItem="rN5-at-kBc" firstAttribute="trailing" secondItem="SdC-BN-Hms" secondAttribute="trailing" constant="88" id="lR1-uN-mJV"/>
+                            <constraint firstItem="jm0-fb-Ng2" firstAttribute="leading" secondItem="rN5-at-kBc" secondAttribute="leading" constant="30" id="mz7-AA-YLm"/>
+                            <constraint firstItem="rN5-at-kBc" firstAttribute="bottom" secondItem="IgI-IY-Trw" secondAttribute="bottom" constant="381" id="niY-bG-wQc"/>
+                            <constraint firstItem="SdC-BN-Hms" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IgI-IY-Trw" secondAttribute="leading" id="oJU-oP-abM"/>
+                            <constraint firstItem="V7O-gc-8hr" firstAttribute="leading" secondItem="rN5-at-kBc" secondAttribute="leading" constant="12" id="smC-9P-rIG"/>
+                            <constraint firstItem="rN5-at-kBc" firstAttribute="trailing" secondItem="V7O-gc-8hr" secondAttribute="trailing" constant="12" id="sxH-Ji-Ssd"/>
+                            <constraint firstItem="SdC-BN-Hms" firstAttribute="top" secondItem="jm0-fb-Ng2" secondAttribute="bottom" constant="77" id="wGD-WY-ZUM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="80d-Gt-DtJ" id="Fdg-wh-Bwn"/>
+                        <outlet property="cardLabel" destination="SdC-BN-Hms" id="1DT-C3-MJ0"/>
+                        <outlet property="ppImageView" destination="fNR-GM-g0v" id="Qef-zH-n5l"/>
+                        <outlet property="ppLabel" destination="IgI-IY-Trw" id="3Th-PC-37y"/>
+                        <outlet property="titleLabel" destination="jm0-fb-Ng2" id="4vu-lx-wKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTH-Jc-9na" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3617" y="-23"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ij8-M8-wMq">
+            <objects>
+                <viewController id="YUb-VK-Rbp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pwg-dV-yCu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBM-eI-321">
+                                <rect key="frame" x="20" y="175.5" width="272" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000.000.0000" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hY8-JO-yni">
+                                <rect key="frame" x="20" y="351.5" width="164.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDY-gR-9k4">
+                                <rect key="frame" x="20" y="402" width="374" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="n6s-AW-GNT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8t-fe-Y8N">
+                                <rect key="frame" x="20" y="305.5" width="151" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dVH-v5-hM7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P8t-fe-Y8N" firstAttribute="top" secondItem="tBM-eI-321" secondAttribute="bottom" constant="88" id="6yO-ic-DV2"/>
+                            <constraint firstItem="dVH-v5-hM7" firstAttribute="bottom" secondItem="VDY-gR-9k4" secondAttribute="bottom" constant="459" id="CSI-2h-rLv"/>
+                            <constraint firstItem="dVH-v5-hM7" firstAttribute="trailing" secondItem="P8t-fe-Y8N" secondAttribute="trailing" constant="243" id="UEK-bl-BgX"/>
+                            <constraint firstItem="hY8-JO-yni" firstAttribute="top" secondItem="P8t-fe-Y8N" secondAttribute="bottom" constant="19.5" id="Vbr-Jv-pF9"/>
+                            <constraint firstItem="dVH-v5-hM7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tBM-eI-321" secondAttribute="trailing" symbolic="YES" id="WMy-5a-dHG"/>
+                            <constraint firstItem="P8t-fe-Y8N" firstAttribute="leading" secondItem="hY8-JO-yni" secondAttribute="leading" id="Yu3-es-BkN"/>
+                            <constraint firstItem="P8t-fe-Y8N" firstAttribute="leading" secondItem="tBM-eI-321" secondAttribute="leading" id="b7y-Vy-pQu"/>
+                            <constraint firstItem="VDY-gR-9k4" firstAttribute="top" secondItem="P8t-fe-Y8N" secondAttribute="bottom" constant="70" id="bgM-tK-6tU"/>
+                            <constraint firstItem="VDY-gR-9k4" firstAttribute="leading" secondItem="dVH-v5-hM7" secondAttribute="leading" constant="20" id="dxK-HF-Cwy"/>
+                            <constraint firstItem="P8t-fe-Y8N" firstAttribute="leading" secondItem="VDY-gR-9k4" secondAttribute="leading" id="kc3-H6-g0K"/>
+                            <constraint firstItem="dVH-v5-hM7" firstAttribute="trailing" secondItem="VDY-gR-9k4" secondAttribute="trailing" constant="20" id="z5R-y6-53c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUJ-Tw-T1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4398.5507246376819" y="-23.4375"/>
+        </scene>
         <!--Post View Controller-->
         <scene sceneID="9aG-4i-OqZ">
             <objects>
@@ -732,12 +871,14 @@
     <resources>
         <image name="bubble.left" catalog="system" width="128" height="110"/>
         <image name="bubble.right" catalog="system" width="128" height="110"/>
+        <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pp" width="900" height="960"/>
         <image name="trash" width="1160" height="675"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
