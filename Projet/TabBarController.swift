@@ -18,8 +18,8 @@ class TabBarController: UITabBarController {
         reportNav.navigationBar.backgroundColor = .white
         let PostsViewController = mainStoryboard.instantiateViewController(withIdentifier: "PostsViewController")
         let ProfileViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
-
-        setViewControllers([homeVC, PostsViewController, reportNav, ProfileViewController], animated: true)
+     let navigationController = UINavigationController(rootViewController:ProfileViewController)
+        setViewControllers([homeVC, PostsViewController, reportNav, navigationController], animated: true)
     }
     
 }
