@@ -4,7 +4,7 @@ enum creditCardCell {
     case CardCell(UIImage, String)
 }
 class DonationViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -14,7 +14,7 @@ class DonationViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-   
+        
     }
     
 }
@@ -30,11 +30,11 @@ extension DonationViewController: UITableViewDataSource {
         switch  cellType {
         
         case .CardCell(let image, let name):
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
-        cell.cardImageView.image = image
-        cell.cardLabel.text = name
-        return cell
-    }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
+            cell.cardImageView.image = image
+            cell.cardLabel.text = name
+            return cell
+        }
     }
     
 }
@@ -42,5 +42,10 @@ extension DonationViewController: UITableViewDataSource {
 extension DonationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "CardNumberViewController") as! CardNumberViewController
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

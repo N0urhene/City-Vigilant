@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="3615.9420289855075" y="-23.4375"/>
         </scene>
-        <!--View Controller-->
+        <!--Card Number View Controller-->
         <scene sceneID="Ij8-M8-wMq">
             <objects>
-                <viewController id="YUb-VK-Rbp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardNumberViewController" id="YUb-VK-Rbp" customClass="CardNumberViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pwg-dV-yCu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,8 +117,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000.000.0000" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hY8-JO-yni">
-                                <rect key="frame" x="20" y="351.5" width="164.5" height="31.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000 0000 0000 0000" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="hY8-JO-yni">
+                                <rect key="frame" x="20" y="351.5" width="263" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
