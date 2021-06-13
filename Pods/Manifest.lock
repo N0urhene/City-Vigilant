@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.4.3)
   - Amplify (1.9.0):
     - Amplify/Default (= 1.9.0)
   - Amplify/Default (1.9.0)
@@ -47,6 +48,7 @@ PODS:
   - Starscream (3.1.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - Amplify
   - AmplifyPlugins/AWSAPIPlugin
   - AmplifyPlugins/AWSCognitoAuthPlugin
@@ -57,6 +59,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Amplify
     - AmplifyPlugins
     - AppSyncRealTimeClient
@@ -72,6 +75,7 @@ SPEC REPOS:
     - Starscream
 
 SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Amplify: fdb7f9aad75a631449e2afb007f78f77deb25a84
   AmplifyPlugins: 5ffbe6b8aedfc19a16074acf7a67e6c237333a34
   AppSyncRealTimeClient: 4479354d262a23d2cc9fea1760f3815b75a4091a
@@ -86,6 +90,6 @@ SPEC CHECKSUMS:
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 2d870564b3fdc3bc7432c6371ae9cb8dc58111e9
+PODFILE CHECKSUM: 8157fa2f3127e0ed3e882123f819c885ab8e7c7d
 
 COCOAPODS: 1.9.3

@@ -12,6 +12,7 @@ target 'Projet' do
   pod 'AmplifyPlugins/AWSS3StoragePlugin'
   pod 'SCLAlertView'
   pod 'AWSS3'
+  pod 'Alamofire', '~> 5.2'
 
   # Pods for Projet
 

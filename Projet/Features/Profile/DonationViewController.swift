@@ -45,7 +45,7 @@ extension DonationViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "CardNumberViewController") as! CardNumberViewController
+        let viewController = storyboard.instantiateViewController(identifier: "PaymeeViewController") as! PaymeeViewController
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

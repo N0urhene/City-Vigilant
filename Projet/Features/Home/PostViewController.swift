@@ -13,10 +13,11 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         amplifyClient.getReports()
         amplifyClient.listReports(setReports: setReports(reports:))
-        tableView.reloadData()
+        self.tableView.reloadData()
         
     }
     
@@ -46,12 +47,15 @@ extension PostViewController: UITableViewDataSource {
         cell.timeLabel.text = time
         cell.captionLabel.text = caption
         //cell.postImageView.image = UIImage(named: image!)
-        //cell.update()
+        cell.update()
+       // tableView.reloadData()
         return cell
     }
 }
 
 //MARK: UITableViewDelegate
 extension PostViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 650
+    }
 }

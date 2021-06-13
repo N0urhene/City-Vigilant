@@ -1,0 +1,35 @@
+
+import UIKit
+import Alamofire
+
+class PaymeeViewController: UIViewController {
+    
+    let httpBody: [String : Any]  = ["vendor": 5020 , "amount": 120.5, "note": "Order #1000132"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let url: String = "https://sandbox.paymee.tn/api/v1/payments/create"
+        //var request = URLRequest(url: url)
+        AF.request(URL(string: url)!, method: .post, parameters: httpBody, encoding: JSONEncoding.default, headers: ["Authorization": "Token 12345678900987654321234567890", "Content-Type": "application/json"]).response { (response) in
+            switch(response.result) {
+            case .success:
+                print(response)
+//                if let jsonData = data {
+//                    self.parse(json: jsonData)
+                break
+            case .failure:
+                print(Error.self)
+            }
+        }
+        
+    }
+    
+//    func parse(json: Data) {
+//        let decoder = JSONDecoder()
+//
+//        if let jsonPaymee = try? decoder.decode([String: Any].self, from: json) {
+//            httpBody = jsonPaymee
+//        }
+//    }
+}
