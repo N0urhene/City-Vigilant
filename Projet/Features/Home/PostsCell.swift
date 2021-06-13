@@ -9,14 +9,14 @@ class PostsCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     
-    var report: Report!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
       
     }
     
-    func update() {
+    func update(report: Report) {
         userLabel.text = report.name
         timeLabel.text = report.time
         captionLabel.text = report.description

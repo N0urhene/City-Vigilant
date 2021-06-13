@@ -8,22 +8,7 @@ import Dispatch
 
 
 class AmplifyClient {
-    
-    func getReports() {
-        Amplify.API.query(request: .list(Report.self)) { event in
-            switch event {
-            case.success(let result):
-                switch result {
-                case .success(let data):
-                    print("Successfully created the report \(data)")
-                case.failure(let error):
-                    print(" \(error)")
-                }
-            case.failure(let APIError):
-                print("failed to create a report", APIError)
-            }
-        }
-    }
+
     
     func saveReport(report: Report) {
         _ = Amplify.API.mutate(request: .create(report)) { event in
@@ -73,29 +58,23 @@ class AmplifyClient {
                                    })
     }
     
-    func listReports(setReports: @escaping (_ reports: [Report])-> ()) {
-        let report = Report.keys
-        DispatchQueue.global(qos: .background).async {
-            Amplify.API.query(request: .paginatedList(Report.self, limit: 1000)) { event in
+    func listReports(completion: @escaping (_ reports: [Report])-> ()) {
+            Amplify.API.query(request: .list(Report.self)) { event in
             switch event {
             case .success(let result):
                 switch result {
                 case .success(let reports):
                     print("Successfully retrieved list of reports: \(reports)")
-                    setReports(reports.elements).self
-                    let predicate = report.name == "nourhene"
-                        && report.time == " 3min"
-                        && report.description == "yahdikk e5dem 5ankamell ranii fadeet"
-                        && report.image == "nourhene ma3adch tetcheff"
-                    print(predicate)
-                    self.getReports()
+                    DispatchQueue.main.sync {
+                        completion(reports)
+                    }
+                    
                 case .failure(let error):
                     print("Got failed result with \(error.errorDescription)")
                 }
             case .failure(let error):
                 print("Got failed event with error \(error)")
             }
-        }
     }
 }
     
