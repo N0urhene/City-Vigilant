@@ -4,37 +4,44 @@ import UIKit
 enum LoginCell {
     case numberCell
     case continueCell
-    case socialLoginCell
+    case socialLoginCell(UIButton)
 }
 
-class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var loginArray: [LoginCell] = [.numberCell, .continueCell, .socialLoginCell]
-//    var loginArray = ["Continue with Email", "Continue with Facebook", "Continue with Google", "Continue with Apple"
-//    ]
+    var loginArray: [LoginCell] = [.numberCell, .continueCell, .socialLoginCell(UIButton())]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
     }
+}
+    extension LoginViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return loginArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LoginTableViewCell
-                cell.loginBtn! = UIButton()
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       if let view = UIStoryboard(name: "Storyboard", bundle: nil).instantiateViewController(identifier: "RegisterViewController") as? RegisterViewController {
-//
-//            view.label.text = loginArray[indexPath.row]
-//            view.button = UIButton()
-//            view.signUpButton = UIButton()
-            self.navigationController?.pushViewController(view, animated: true)
+        let cellType = loginArray[indexPath.row]
+        switch cellType {
+        case .numberCell:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NumCell", for: indexPath) as! NumCell
+            return cell
+        case .continueCell:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ContinueCell", for: indexPath) as! ContinueCell
+            return cell
+        case .socialLoginCell:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SocialLoginCell", for: indexPath) as! SocialLoginCell
+            return cell
+    
         }
     }
+  
+}
+
+extension LoginViewController: UITableViewDelegate {
+    
 }

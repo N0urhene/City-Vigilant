@@ -18,10 +18,9 @@ class PostsCell: UITableViewCell {
     
     func update(report: Report) {
         userLabel.text = report.name
-        timeLabel.text = report.time
         captionLabel.text = report.description
         //postImageView.image = report.image
-        statusLabel.text = "\(report.nbrOfLikes) likes                                                      \(report.nbrOfComments) comments"
+        statusLabel.text = "\(report.nbrOfLikes) likes                              \(report.nbrOfComments) comments"
 
     }
 }

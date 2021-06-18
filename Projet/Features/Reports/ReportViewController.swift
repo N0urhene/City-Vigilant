@@ -44,9 +44,9 @@ class ReportViewController: UIViewController{
         tableView.register(UINib(nibName: "SaveReportCell", bundle: nil), forCellReuseIdentifier: "SaveReportCell")
         tableView.register(UINib(nibName: "StreetReportCell", bundle: nil), forCellReuseIdentifier: "StreetReportCell")
         tableView.register(UINib(nibName: "FileReportCell", bundle: nil), forCellReuseIdentifier: "FileReportCell")
-    
+        
     }
-  
+    
     func newReport()  {
         
         guard  name?.isEmpty == false,
@@ -59,14 +59,13 @@ class ReportViewController: UIViewController{
         let reportData = Report(name: self.name,
                                 region: self.region,
                                 description: self.desc,
-                                image: self.image,
                                 categorie: self.categorie)
         amplifyClient.saveReport(report: reportData)
 //        amplifyClient.downloadImages(reports: reportData)
         SCLAlertView().showSuccess("Success", subTitle: "Your report had been successfully created")
         
     }
-
+    
     private func openCamera() {
         if(UIImagePickerController.isSourceTypeAvailable(.camera))
         {
@@ -87,7 +86,7 @@ class ReportViewController: UIViewController{
     }
     
     private func importImage() {
-       // let reportData = Report(image: self.image)
+        // let reportData = Report(image: self.image)
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
@@ -163,7 +162,7 @@ extension ReportViewController: UITableViewDataSource {
             // cell.val = openCamera
             cell.pic = importImage
             cell.file = attachDocument
-//            cell.nameLabel.text = 
+//            cell.nameLabel.text =
             return cell
         case .saveCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SaveReportCell", for: indexPath) as! SaveReportCell
@@ -194,10 +193,10 @@ extension ReportViewController: UINavigationControllerDelegate, UIImagePickerCon
         print(image.size)
         
         guard let fileUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL else { return }
-       
+        
         print(fileUrl.lastPathComponent)
-//           print(fileUrl.pathExtension)     // get file extension
-           dismiss(animated: true, completion: nil)
+        //           print(fileUrl.pathExtension)     // get file extension
+        dismiss(animated: true, completion: nil)
     }
 }
 //MARK: Protocol UIDocumentPickerDelegate
@@ -208,10 +207,10 @@ extension ReportViewController: UIDocumentPickerDelegate{
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let sandboxFileURL = dir.appendingPathComponent(selectedFileURL.lastPathComponent)
         
-               print(sandboxFileURL.lastPathComponent)
-                    DispatchQueue.main.async {
-                        self.attachDocument()
-                    }
+        print(sandboxFileURL.lastPathComponent)
+        DispatchQueue.main.async {
+            self.attachDocument()
+        }
     }
 }
 

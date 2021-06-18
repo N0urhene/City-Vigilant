@@ -17,6 +17,9 @@ class PostViewController: UIViewController {
     // postReports bch twalli ta5ou tab de Reports
     func setReports(reports: [Report]) {
         postReports = reports
+//        postReports.sort { (report1, report2) -> Bool in
+//            return report1.createdAt ?? Date() > report2.createdAt ?? Date()
+//        }
         tableView.reloadData()
     }
 }
@@ -38,7 +41,5 @@ extension PostViewController: UITableViewDataSource {
 
 //MARK: UITableViewDelegate
 extension PostViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 650
-    }
+
 }

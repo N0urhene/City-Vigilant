@@ -51,8 +51,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath ) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "DonationViewController") as! DonationViewController
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "RegisterViewController") as! RegisterViewController
         navigationController?.pushViewController(viewController, animated: true)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

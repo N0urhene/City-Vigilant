@@ -1,8 +1,11 @@
 
 import UIKit
 import Alamofire
+import WebKit
 
 class PaymeeViewController: UIViewController {
+    
+    @IBOutlet weak var webView: WKWebView!
     
     let httpBody: [String : Any]  = ["vendor": 1834 , "amount": 120.5, "note": "Order #1000132"]
     
@@ -22,14 +25,10 @@ class PaymeeViewController: UIViewController {
                 print(Error.self)
             }
         }
-        
+        guard let urll = URL(string: "https://sandbox.paymee.tn/gateway/922650f43f77a6fe2fcdbbe4558727e3") else {
+            return
+        }
+        webView.load(URLRequest(url: urll))
     }
-    
-//    func parse(json: Data) {
-//        let decoder = JSONDecoder()
-//
-//        if let jsonPaymee = try? decoder.decode([String: Any].self, from: json) {
-//            httpBody = jsonPaymee
-//        }
-//    }
+
 }

@@ -16,9 +16,7 @@ type Report
   name: String
   region: String
   description: String
-  image: String
   categorie: String
-  time: String
   nbrOfLikes: Int
   nbrOfComments: Int
   

@@ -3,12 +3,11 @@ import UIKit
 
 enum HomeCell {
     case PictureCell
-    case NewsCell
 }
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    let homeArray: [HomeCell] = [.PictureCell, .NewsCell]
+    let homeArray: [HomeCell] = [.PictureCell]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +40,6 @@ extension HomeViewController: UITableViewDataSource {
             cell.homeImageView?.image = UIImage(named: "home")
             cell.showPostsList = showPostsListAction
             return cell
-        case .NewsCell:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
-            cell.collectionView.tag = indexPath.section
-            
-            return cell
         }
     }
 }
@@ -54,8 +48,6 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch homeArray[indexPath.section] {
-        case .NewsCell:
-            return 200.0
         case .PictureCell:
             return 750.0
         }

@@ -9,9 +9,9 @@ class TabBarController: UITabBarController {
         view.backgroundColor = .gray
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
         
         let homeVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController")
-        
         let reportCategoriesViewController = mainStoryboard.instantiateViewController(withIdentifier: "ReportCategoriesViewController") as! ReportCategoriesViewController
         let reportNav = UINavigationController(rootViewController: reportCategoriesViewController)
         reportNav.navigationBar.prefersLargeTitles = true
