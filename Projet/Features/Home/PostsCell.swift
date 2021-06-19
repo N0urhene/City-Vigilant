@@ -7,20 +7,22 @@ class PostsCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
-    @IBOutlet weak var statusLabel: UILabel!
-    
+    var showUpdate = {}
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
       
+    }
+    @IBAction func shareAction(_ sender: Any) {
+    }
+    
+    @IBAction func updateAction(_ sender: Any) {
+        showUpdate()
     }
     
     func update(report: Report) {
         userLabel.text = report.name
         captionLabel.text = report.description
-        //postImageView.image = report.image
-        statusLabel.text = "\(report.nbrOfLikes) likes                              \(report.nbrOfComments) comments"
-
+        //postImageView.image = UIImage(named: postImages)
     }
 }

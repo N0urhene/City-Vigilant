@@ -16,10 +16,10 @@ class TabBarController: UITabBarController {
         let reportNav = UINavigationController(rootViewController: reportCategoriesViewController)
         reportNav.navigationBar.prefersLargeTitles = true
         reportNav.navigationBar.backgroundColor = .white
-        let PostsViewController = mainStoryboard.instantiateViewController(withIdentifier: "PostsViewController")
+        let PostViewController = mainStoryboard.instantiateViewController(withIdentifier: "PostViewController")
         let ProfileViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileViewController")
      let navigationController = UINavigationController(rootViewController:ProfileViewController)
-        setViewControllers([homeVC, PostsViewController, reportNav, navigationController], animated: true)
+        setViewControllers([homeVC, PostViewController, reportNav, navigationController], animated: true)
     }
     
 }

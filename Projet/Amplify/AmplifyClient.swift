@@ -91,4 +91,24 @@ class AmplifyClient {
             }
         }
     }
+    
+    func getTodo() {
+        Amplify.API.query(request: .get(Report.self, byId: "9FCF5DD5-1D65-4A82-BE76-42CB438607A0")) { event in
+            switch event {
+            case .success(let result):
+                switch result {
+                case .success(let todo):
+                    guard let todo = todo else {
+                        print("Could not find todo")
+                        return
+                    }
+                    print("Successfully retrieved todo: \(todo)")
+                case .failure(let error):
+                    print("Got failed result with \(error.errorDescription)")
+                }
+            case .failure(let error):
+                print("Got failed event with error \(error)")
+            }
+        }
+    }
 }
