@@ -3,11 +3,12 @@ import UIKit
 
 class UpdatePostViewController: UIViewController {
 
+   // @IBOutlet weak var txtView: UITextView!
+    @IBOutlet weak var updateBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateBtn.layer.cornerRadius = 10
+       
     }
-  
-
 }

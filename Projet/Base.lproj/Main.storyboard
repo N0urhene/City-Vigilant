@@ -20,63 +20,75 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NdC-TO-KHj">
-                                <rect key="frame" x="20" y="312" width="374" height="584"/>
+                                <rect key="frame" x="0.0" y="167" width="414" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CardCell" rowHeight="106" id="hTY-I7-VeG" customClass="CardCell" customModule="Projet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="106"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AssociationCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AssociationCell" rowHeight="101" id="hTY-I7-VeG" customClass="AssociationCell" customModule="Projet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hTY-I7-VeG" id="Nvt-6J-av6">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit card or debit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-BN-Hms">
-                                                    <rect key="frame" x="90" y="38" width="244" height="26.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" highlightedImage="ques" translatesAutoresizingMaskIntoConstraints="NO" id="80d-Gt-DtJ">
-                                                    <rect key="frame" x="33" y="24.5" width="39" height="53"/>
+                                                    <rect key="frame" x="12" y="11" width="96" height="79"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="39" id="x0L-Rx-rNF"/>
+                                                        <constraint firstAttribute="width" constant="96" id="gnF-xK-wGr"/>
                                                     </constraints>
-                                                    <imageReference key="image" image="creditcard" catalog="system" symbolScale="large" renderingMode="original"/>
+                                                    <imageReference key="image" image="jci1" symbolScale="large" renderingMode="original"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-Om-boN">
-                                                    <rect key="frame" x="12" y="105" width="342" height="1"/>
+                                                    <rect key="frame" x="12" y="100" width="382" height="1"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="xO5-S7-i72"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JCI Ghomrassen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esi-tI-Se0">
+                                                    <rect key="frame" x="114" y="30.5" width="280" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Credit card or debit card" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-BN-Hms">
+                                                    <rect key="frame" x="110" y="66" width="284" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <color key="highlightedColor" systemColor="systemGray3Color"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="top" secondItem="Nvt-6J-av6" secondAttribute="topMargin" constant="27" id="36f-1F-mds"/>
-                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="leading" secondItem="80d-Gt-DtJ" secondAttribute="trailing" constant="18" id="7Vj-jN-gQb"/>
-                                                <constraint firstItem="80d-Gt-DtJ" firstAttribute="centerY" secondItem="SdC-BN-Hms" secondAttribute="centerY" id="Edk-32-F6L"/>
-                                                <constraint firstItem="80d-Gt-DtJ" firstAttribute="top" secondItem="Nvt-6J-av6" secondAttribute="topMargin" constant="14" id="JPB-9h-uhw"/>
+                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="top" secondItem="Nvt-6J-av6" secondAttribute="top" constant="66" id="1B4-Kv-oHi"/>
+                                                <constraint firstItem="80d-Gt-DtJ" firstAttribute="leading" secondItem="UAX-Om-boN" secondAttribute="leading" id="5MO-oi-vsP"/>
+                                                <constraint firstItem="esi-tI-Se0" firstAttribute="leading" secondItem="Nvt-6J-av6" secondAttribute="leading" constant="114" id="7bT-05-Pig"/>
+                                                <constraint firstItem="80d-Gt-DtJ" firstAttribute="bottom" secondItem="Nvt-6J-av6" secondAttribute="bottomMargin" id="8Ma-Vs-255"/>
+                                                <constraint firstAttribute="trailing" secondItem="esi-tI-Se0" secondAttribute="trailing" constant="20" symbolic="YES" id="CMy-xg-KYM"/>
+                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="top" secondItem="esi-tI-Se0" secondAttribute="bottom" constant="8" symbolic="YES" id="DY5-iB-pOe"/>
+                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="trailing" secondItem="esi-tI-Se0" secondAttribute="trailing" id="TRU-Ei-xaR"/>
                                                 <constraint firstItem="UAX-Om-boN" firstAttribute="leading" secondItem="Nvt-6J-av6" secondAttribute="leading" constant="12" id="Uph-5C-Kec"/>
                                                 <constraint firstAttribute="bottom" secondItem="UAX-Om-boN" secondAttribute="bottom" id="auQ-UF-qt3"/>
+                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="trailing" secondItem="UAX-Om-boN" secondAttribute="trailing" id="eyT-Cg-FWF"/>
+                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="leading" secondItem="Nvt-6J-av6" secondAttribute="leading" constant="110" id="fBU-Bg-FXl"/>
+                                                <constraint firstItem="80d-Gt-DtJ" firstAttribute="top" secondItem="Nvt-6J-av6" secondAttribute="topMargin" id="g3s-vZ-4Kx"/>
                                                 <constraint firstItem="UAX-Om-boN" firstAttribute="trailing" secondItem="Nvt-6J-av6" secondAttribute="trailingMargin" id="kau-oK-Nbm"/>
-                                                <constraint firstItem="80d-Gt-DtJ" firstAttribute="leading" secondItem="Nvt-6J-av6" secondAttribute="leadingMargin" constant="13" id="m0s-V9-3ma"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="SdC-BN-Hms" secondAttribute="trailing" constant="20" id="mKl-x0-wWa"/>
-                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="leading" secondItem="80d-Gt-DtJ" secondAttribute="trailing" constant="18" id="oHh-Vj-hjK"/>
+                                                <constraint firstAttribute="trailing" secondItem="SdC-BN-Hms" secondAttribute="trailing" constant="20" symbolic="YES" id="s8I-78-KvR"/>
                                                 <constraint firstAttribute="bottom" secondItem="SdC-BN-Hms" secondAttribute="bottom" constant="41.5" id="u9w-zq-VdT"/>
+                                                <constraint firstItem="SdC-BN-Hms" firstAttribute="leading" secondItem="80d-Gt-DtJ" secondAttribute="trailing" constant="2" id="uE6-D4-KN1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="captionLabel" destination="SdC-BN-Hms" id="dcg-39-Vd9"/>
                                             <outlet property="cardImageView" destination="80d-Gt-DtJ" id="rYy-3L-xR2"/>
-                                            <outlet property="cardLabel" destination="SdC-BN-Hms" id="dcg-39-Vd9"/>
+                                            <outlet property="nameLabel" destination="esi-tI-Se0" id="UGW-kz-set"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set up  a payment          method" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-fb-Ng2">
-                                <rect key="frame" x="20" y="178" width="356" height="84"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an association" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-fb-Ng2">
+                                <rect key="frame" x="20" y="126" width="356" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -85,13 +97,13 @@
                         <viewLayoutGuide key="safeArea" id="rN5-at-kBc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NdC-TO-KHj" firstAttribute="top" secondItem="jm0-fb-Ng2" secondAttribute="bottom" constant="50" id="1Ez-gj-fpA"/>
+                            <constraint firstItem="NdC-TO-KHj" firstAttribute="top" secondItem="jm0-fb-Ng2" secondAttribute="bottom" constant="5" id="1Ez-gj-fpA"/>
                             <constraint firstItem="jm0-fb-Ng2" firstAttribute="leading" secondItem="rN5-at-kBc" secondAttribute="leading" constant="20" id="B6Q-zB-Xon"/>
-                            <constraint firstItem="rN5-at-kBc" firstAttribute="trailing" secondItem="NdC-TO-KHj" secondAttribute="trailing" constant="20" id="JHD-1j-SVf"/>
+                            <constraint firstItem="rN5-at-kBc" firstAttribute="trailing" secondItem="NdC-TO-KHj" secondAttribute="trailing" id="JHD-1j-SVf"/>
                             <constraint firstAttribute="bottom" secondItem="NdC-TO-KHj" secondAttribute="bottom" id="NBR-s9-bTP"/>
-                            <constraint firstItem="NdC-TO-KHj" firstAttribute="leading" secondItem="rN5-at-kBc" secondAttribute="leading" constant="20" id="fYY-Ye-cTP"/>
+                            <constraint firstItem="NdC-TO-KHj" firstAttribute="leading" secondItem="rN5-at-kBc" secondAttribute="leading" id="fYY-Ye-cTP"/>
                             <constraint firstItem="rN5-at-kBc" firstAttribute="trailing" secondItem="jm0-fb-Ng2" secondAttribute="trailing" constant="38" id="kyA-L2-JXh"/>
-                            <constraint firstItem="rN5-at-kBc" firstAttribute="bottom" secondItem="jm0-fb-Ng2" secondAttribute="bottom" constant="600" id="vNF-VV-Iqe"/>
+                            <constraint firstItem="rN5-at-kBc" firstAttribute="bottom" secondItem="jm0-fb-Ng2" secondAttribute="bottom" constant="700" id="vNF-VV-Iqe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -110,19 +122,8 @@
                     <view key="view" contentMode="scaleToFill" id="Pwg-dV-yCu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paypal" translatesAutoresizingMaskIntoConstraints="NO" id="es7-6c-xOE">
-                                <rect key="frame" x="87" y="236" width="240" height="401"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dVH-v5-hM7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="dVH-v5-hM7" firstAttribute="bottom" secondItem="es7-6c-xOE" secondAttribute="bottom" id="37i-PR-PLN"/>
-                            <constraint firstItem="dVH-v5-hM7" firstAttribute="trailing" secondItem="es7-6c-xOE" secondAttribute="trailing" id="TWa-7G-gdm"/>
-                            <constraint firstItem="es7-6c-xOE" firstAttribute="leading" secondItem="dVH-v5-hM7" secondAttribute="leading" id="pCE-eI-8qe"/>
-                            <constraint firstItem="es7-6c-xOE" firstAttribute="top" secondItem="dVH-v5-hM7" secondAttribute="top" id="vAD-Ke-S7D"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUJ-Tw-T1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -381,6 +382,9 @@
                             <constraint firstItem="ekz-9M-skY" firstAttribute="leading" secondItem="jmH-rO-lnN" secondAttribute="trailing" constant="33" id="vTT-ir-LkP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="updateBtn" destination="Fgn-3o-jQO" id="B7c-qC-cE1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4x-ha-1eW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -696,7 +700,7 @@
             </objects>
             <point key="canvasLocation" x="1787" y="725"/>
         </scene>
-        <!--User Name-->
+        <!--Profile-->
         <scene sceneID="dAC-An-tsM">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="ZdP-Fe-5nG" customClass="ProfileViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
@@ -842,7 +846,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="CsK-lt-JoY">
                         <imageReference key="selectedImage" image="person" catalog="system" symbolScale="large" renderingMode="template"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="User Name" largeTitleDisplayMode="always" id="hGi-IX-yuX"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="hGi-IX-yuX"/>
                     <connections>
                         <outlet property="tableView" destination="ZDr-54-N6r" id="Onn-Rv-fse"/>
                     </connections>
@@ -854,7 +858,6 @@
         <!--Posts-->
         <scene sceneID="3mu-68-rwj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oqh-ku-HdY" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PostsViewController" id="KpK-l1-owV" customClass="PostsViewController" customModule="Projet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S5a-ce-3uy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -867,6 +870,7 @@
                         <imageReference key="selectedImage" image="bubble.left" catalog="system" renderingMode="template"/>
                     </tabBarItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqh-ku-HdY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1454" y="-15"/>
         </scene>
@@ -963,12 +967,11 @@
         <image name="bubble.left" catalog="system" width="128" height="110"/>
         <image name="bubble.right" catalog="system" width="128" height="110"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
-        <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="dechets" width="900" height="675"/>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="jci1" width="500" height="500"/>
         <image name="map" catalog="system" width="128" height="110"/>
-        <image name="paypal" width="509" height="820"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
@@ -987,8 +990,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

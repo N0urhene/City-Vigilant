@@ -167,10 +167,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-b0-gbU">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Phone number" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-b0-gbU">
                                                     <rect key="frame" x="35" y="91" width="344" height="92"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="numField:" destination="AnE-Z8-CJe" eventType="editingDidEnd" id="oP9-u9-ERs"/>
                                                     </connections>

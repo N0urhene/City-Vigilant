@@ -1,8 +1,9 @@
 
 import UIKit
-class CardCell: UITableViewCell {
+class AssociationCell: UITableViewCell {
     
-    @IBOutlet weak var cardLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var cardImageView: UIImageView!
     
     override func awakeFromNib() {

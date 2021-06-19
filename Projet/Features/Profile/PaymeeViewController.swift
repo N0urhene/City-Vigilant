@@ -18,14 +18,12 @@ class PaymeeViewController: UIViewController {
             switch(response.result) {
             case .success(let data):
                 print(String(data: data!, encoding: .utf8))
-//                if let jsonData = data {
-//                    self.parse(json: jsonData)
                 break
             case .failure:
                 print(Error.self)
             }
         }
-        guard let urll = URL(string: "https://sandbox.paymee.tn/gateway/922650f43f77a6fe2fcdbbe4558727e3") else {
+        guard let urll = URL(string: "https://sandbox.paymee.tn/gateway/ae4f3688990e2b80925aa342627625e7") else {
             return
         }
         webView.load(URLRequest(url: urll))
