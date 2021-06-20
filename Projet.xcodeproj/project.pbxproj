@@ -31,6 +31,8 @@
 		0F88D3B6267C0DF100B430F7 /* SocialLoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88D3B5267C0DF100B430F7 /* SocialLoginCell.swift */; };
 		0F88D3C1267D763E00B430F7 /* UpdatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88D3C0267D763E00B430F7 /* UpdatePostViewController.swift */; };
 		0F88D3DD267EC07D00B430F7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88D3DC267EC07D00B430F7 /* SignUpViewController.swift */; };
+		0F88D3E2267EC0E800B430F7 /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88D3E1267EC0E800B430F7 /* NameCell.swift */; };
+		0F88D3E7267EC10400B430F7 /* MailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88D3E6267EC10400B430F7 /* MailCell.swift */; };
 		0F8BD7802611CC0500122DC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD77F2611CC0500122DC7 /* AppDelegate.swift */; };
 		0F8BD7822611CC0500122DC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */; };
 		0F8BD7842611CC0500122DC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8BD7832611CC0500122DC7 /* HomeViewController.swift */; };
@@ -137,6 +139,8 @@
 		0F88D3B5267C0DF100B430F7 /* SocialLoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginCell.swift; sourceTree = "<group>"; };
 		0F88D3C0267D763E00B430F7 /* UpdatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePostViewController.swift; sourceTree = "<group>"; };
 		0F88D3DC267EC07D00B430F7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0F88D3E1267EC0E800B430F7 /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
+		0F88D3E6267EC10400B430F7 /* MailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailCell.swift; sourceTree = "<group>"; };
 		0F8BD77C2611CC0500122DC7 /* Projet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8BD77F2611CC0500122DC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F8BD7812611CC0500122DC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				0F88D3B0267C0DCE00B430F7 /* ContinueCell.swift */,
 				0F88D3B5267C0DF100B430F7 /* SocialLoginCell.swift */,
 				0F88D3DC267EC07D00B430F7 /* SignUpViewController.swift */,
+				0F88D3E1267EC0E800B430F7 /* NameCell.swift */,
+				0F88D3E6267EC10400B430F7 /* MailCell.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -688,6 +694,7 @@
 				0F8BD7842611CC0500122DC7 /* HomeViewController.swift in Sources */,
 				0F8BD7802611CC0500122DC7 /* AppDelegate.swift in Sources */,
 				0F8BD7B92611D7CD00122DC7 /* ProfileViewController.swift in Sources */,
+				0F88D3E2267EC0E800B430F7 /* NameCell.swift in Sources */,
 				0F3C2DFF262EF3B9000271DD /* FileReportCell.swift in Sources */,
 				0FF1704626497BBD00E1F6DB /* DescriptionViewCell.swift in Sources */,
 				0FF7D318261FBE7900DE6A02 /* ProfileTableViewCell.swift in Sources */,
@@ -718,6 +725,7 @@
 				0F88D3B6267C0DF100B430F7 /* SocialLoginCell.swift in Sources */,
 				0F84C1002629BED4004C5FDE /* ButtonTableViewCell.swift in Sources */,
 				580FE6BA75A14DB9891AB52F /* User+Schema.swift in Sources */,
+				0F88D3E7267EC10400B430F7 /* MailCell.swift in Sources */,
 				2029F29A6BBD4392B4C7CF46 /* Report.swift in Sources */,
 				1D3E556AA1BF41E799DA3BA9 /* Report+Schema.swift in Sources */,
 				0FB6B8CD26766877001EE93D /* PaymeeViewController.swift in Sources */,
