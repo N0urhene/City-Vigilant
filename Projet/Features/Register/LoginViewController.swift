@@ -2,16 +2,16 @@
 import UIKit
 
 enum LoginCell {
-    case numberCell
-    case continueCell
-    case socialLoginCell(UIButton)
+    case NumberCell
+    case ContinueCell
+    case SocialLoginCell(UIButton)
 }
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var loginArray: [LoginCell] = [.numberCell, .continueCell, .socialLoginCell(UIButton())]
-
+    var loginArray: [LoginCell] = [.NumberCell, .ContinueCell, .SocialLoginCell(UIButton())]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -27,16 +27,17 @@ class LoginViewController: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellType = loginArray[indexPath.row]
         switch cellType {
-        case .numberCell:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NumCell", for: indexPath) as! NumCell
+        case .NumberCell:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NumberCell", for: indexPath) as! NumberCell
             return cell
-        case .continueCell:
+            
+        case .ContinueCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ContinueCell", for: indexPath) as! ContinueCell
             return cell
-        case .socialLoginCell:
+            
+        case .SocialLoginCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SocialLoginCell", for: indexPath) as! SocialLoginCell
             return cell
-    
         }
     }
   

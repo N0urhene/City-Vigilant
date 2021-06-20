@@ -7,7 +7,7 @@ class LoginTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        loginBtn.layer.cornerRadius = 12
+        loginBtn.layer.cornerRadius = 10
         loginBtn.layer.borderWidth = 1
         loginBtn.layer.borderColor = UIColor.black.cgColor
     }
