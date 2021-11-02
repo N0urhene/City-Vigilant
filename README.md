@@ -2,7 +2,7 @@
 
 A mobile application that perfectly meets the constraints and needs of citizens and offers them a good quality service.
 
-   -This application makes it possible to inform municipal and territorial services in real time incidents that may escape their vigilance.
+   -This application makes it possible to inform in real time municipal and territorial services incidents that may escape their vigilance.
  
    -To ensure the rapid, accurate and reliable reporting of a disorder observed on the public space for facilitate its support by the services.
    
@@ -29,11 +29,7 @@ width=20% height=20%>
 width=20% height=20%>
 <img src="https://user-images.githubusercontent.com/76226223/139948555-35c6c4ed-2bec-4d29-8563-5251b35a9d33.png"
 width=20% height=20%>
-<img src="https://user-images.githubusercontent.com/76226223/139948591-4eac2f2d-9b44-4ae7-9573-a34a0cb3ddc0.png"
-width=20% height=20%>
 <img src="https://user-images.githubusercontent.com/76226223/139948638-4b228360-14f9-45c7-8b41-d653180a44bf.png"
-width=20% height=20%>
-<img src="https://user-images.githubusercontent.com/76226223/139948664-91738401-4991-435c-8f48-d7029eadb14d.png"
 width=20% height=20%>
 <img src="https://user-images.githubusercontent.com/76226223/139948703-a82d7638-5225-4e58-a4c1-a9260452b113.png"
 width=20% height=20%>
